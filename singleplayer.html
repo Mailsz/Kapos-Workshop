@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Akasztófa</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#generate-string").click(function (e) {
+                $.post("/generator", {"length": $("input[name='length']").val()})
+                    .done(function (string) {
+                        $('p#szo').text(string);
+                    });
+                e.preventDefault();
+            });
+
+            $("#replace-string").click(function (e) {
+                $.ajax({
+                    type: "PUT",
+                    url: "/generator",
+                    data: {"another_string": $("#the-string input").val()}
+                })
+                    .done(function () {
+                        alert("Replaced!");
+                    });
+                e.preventDefault();
+            });
+
+            $("#delete-string").click(function (e) {
+                $.ajax({
+                    type: "DELETE",
+                    url: "/generator"
+                })
+                    .done(function () {
+                        $("#the-string").hide();
+                    });
+                e.preventDefault();
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<section id="szo_sec">
+    <p id="szo"><U>EZ A SZO</U></p>
+</section>
+<hr class="hrtop">
+<section id="kep_sec">
+    <img src="kepek/7.png">
+</section>
+
+<section id="betu_sec">
+    <div class="betu_div">
+        <button class="betu">A</button>
+        <button class="betu">Á</button>
+        <button class="betu">B</button>
+        <button class="betu">C</button>
+        <button class="betu">D</button>
+        <button class="betu">E</button>
+        <button class="betu">É</button>
+        <button class="betu">F</button>
+        <button class="betu">G</button>
+        <button class="betu">H</button>
+        <button class="betu">I</button>
+        <button class="betu">Í</button>
+        <button class="betu">J</button>
+        <button class="betu">K</button>
+        <button class="betu">L</button>
+        <button class="betu">M</button>
+        <button class="betu">N</button>
+        <button class="betu">O</button>
+        <button class="betu">Ó</button>
+        <button class="betu">Ö</button>
+        <button class="betu">Ő</button>
+        <button class="betu">P</button>
+        <button class="betu">Q</button>
+        <button class="betu">R</button>
+        <button class="betu">S</button>
+        <button class="betu">T</button>
+        <button class="betu">U</button>
+        <button class="betu">Ú</button>
+        <button class="betu">Ü</button>
+        <button class="betu">Ű</button>
+        <button class="betu">V</button>
+        <button class="betu">W</button>
+        <button class="betu">X</button>
+        <button class="betu">Y</button>
+        <button class="betu">Z</button>
+    </div>
+</section>
+
+    <button id="generate-string">Give it now!</button>
+</body>
+</body>
+</html>

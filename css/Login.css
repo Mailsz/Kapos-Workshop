@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Rubik:wght@500&display=swap');
+*{
+	margin: 5px;
+	padding: 0px;
+	box-sizing: border-box;
+
+	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
+}
+h1{
+  text-align: center;
+  font-family: arial;
+  font-size: 48px;
+  font-style: bold;
+  letter-spacing: 2.7px;
+  color: #14279B;
+}
+
+
+/*felsorolás kinézete*/
+.lista {
+	list-style-type: square;
+	margin: auto;
+	margin-left: 2%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	padding-left: 1%;
+	color: white;
+}
+
+/* szintek felsorolása*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* Szövegek színét határozza meg*/
+ h3, p {
+	color: white;
+}
+/*input fölötti sor színe*/
+label {
+	color: white;
+}
+/*Háttérszín*/
+body {
+	background-color: #E6E6E6;
+}
+/*Szövegdobozok Színe*/
+div {
+	background-color: #3D56B2;
+}
+/*közép auto margin*/
+p {
+	margin-bottom: 0px;
+}
+/*a szöveg doboz körüli fehér szegély*/
+.container {
+  padding: 16px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border-style: solid;
+	border-width: medium;
+	border-radius: 15px;
+	border-color: white;
+	width: 50vw;
+	margin: auto;
+}
+/*az inputdobozok kinézete*/
+input[type=text], input[type=Email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 3px 0;
+  display: inline-block;
+  border: none;
+  background: #ffffff;
+	margin-bottom: 10px;
+
+}
+
+input[type=text]:focus, input[type=Email], input[type=password]:focus {
+  outline: none;
+}
+/*vízszintes vonalak*/
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/*regisztrálás gomb kinézete*/
+.registerbtn {
+  background-color: #14279B;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 2px solid #E6E6E6;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.78;
+  transition: 0.3s;
+  border-radius: 15px
+}
+
+.registerbtn:hover {
+  opacity:1;
+
+}
+/*Link színe*/
+a {
+  color: white;
+}
+
+/*a hibás adatnál megjelenő üzenet kinézete*/
+.hibauzenet {
+	margin-top: 2%;
+	background-color: #FF7F7F;
+	text-align: center;
+	width: 100%;
+	color: white;
+}
+/*belépést helyezi középre*/
+.signin {
+  text-align: center;
+
+}
+
+body {
+	text-align: center;
+}
