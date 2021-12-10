@@ -7,27 +7,26 @@
 
     <!--Jquery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Ikonok -->
+    <!-- FontAwesome(Ikonok) és CSS link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css\login.css">
-    <!-- Js -->
   </head>
   <body>
 
-        <!-- regisztráló felület -->
 
     <form id="form" method="POST">
 
       <h1 style="text-align: center">Regisztráció</h1>
       <br>
       <div class="container">
+        <!-- Email megadása mező  -->
         <label for="email"><b>Email</b></label>
         <input type="email" placeholder="Email" name="email" id="email" required>
-
+        <!-- Jelszó megadása mező  -->
         <label for="psw"><b>Jelszó</b></label>
         <input type="password" placeholder="Jelszó" name="psw" id="psw" required>
 
-
+        <!-- Jelszó megerősítése mező  -->
         <label for="psw"><b>Jelszó megerősítése</b></label>
         <input type="password" placeholder="Jelszó megerősítése" name="psw" id="psw" required>
 
@@ -37,6 +36,7 @@
           <div class="col"></div>
           <div class="col-6">
             <br>
+            <!-- Regisztrálás  -->
             <button type="submit" class="registerbtn" id="login">Regisztrálás</button>
             <div class="hibauzenet" id="login_valasz"></div>
           </div>
@@ -47,7 +47,7 @@
       <br>
 
       <div class="container signin">
-
+        <!-- Bejelentkezés oldal link  -->
         <h3>Már van fiókja?</h3>
       <a href="login.html">Bejelentkezés</a>
       </div>
