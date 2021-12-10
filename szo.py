@@ -4,11 +4,13 @@ import string
 import mysql.connector
 import cherrypy
 
+# Localhost port megadása
 cherrypy.engine.stop()
 cherrypy.server.httpserver = None
 cherrypy.config.update({'server.socket_port': 8017})
 cherrypy.engine.start()
 
+# Megnyitja a html file-t amihez csatolva van
 class StringGenerator(object):
     @cherrypy.expose
     def index(self):
@@ -21,7 +23,8 @@ class StringGeneratorWebService(object):
     def GET(self):
         return cherrypy.session['mystring']
 
-    def POST(self, length=8):
+    def POST(self):
+        # Csatlakozás az adatbázishoz
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
@@ -30,6 +33,7 @@ class StringGeneratorWebService(object):
         )
 
         szam = random.randint(1, 5)
+
         mycursor = mydb.cursor()
 
         mycursor.execute("SELECT szo FROM szavak WHERE id='" + str(szam) + "'")
@@ -40,6 +44,7 @@ class StringGeneratorWebService(object):
 
         for x in myresult:
             szo = x
+        # Vissza adja a szót a html file-nak
         return szo[0]
 
     def PUT(self, another_string):
@@ -49,6 +54,7 @@ class StringGeneratorWebService(object):
         cherrypy.session.pop('mystring', None)
 
 if __name__ == '__main__':
+    # Konfiguráció az elérési utakhoz
     conf = {
         '/': {
             'tools.sessions.on': True,
