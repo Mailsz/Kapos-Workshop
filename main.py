@@ -1,9 +1,9 @@
 import cherrypy
 import random
-import mysql.connector
+from MySQLdb import _mysql as mysql
 
 def randomszo():
-    mydb = mysql.connector.connect(
+    mydb = mysql.connect(
         host="localhost",
         user="root",
         password="",

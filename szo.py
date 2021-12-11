@@ -1,13 +1,13 @@
 import os, os.path
 import random
 import string
-import mysql.connector
 import cherrypy
+import MySQLdb
 
 # Localhost port megadása
 cherrypy.engine.stop()
 cherrypy.server.httpserver = None
-cherrypy.config.update({'server.socket_port': 8017})
+cherrypy.config.update({'server.socket_port': 8080})
 cherrypy.engine.start()
 
 # Megnyitja a html file-t amihez csatolva van
@@ -24,19 +24,23 @@ class StringGeneratorWebService(object):
         return cherrypy.session['mystring']
 
     def POST(self):
+        # Nyelv beállítása az adatbázishoz. (milyen nyelven kérje a szót)
+        nyelv = "magyar"
+
+
         # Csatlakozás az adatbázishoz
-        mydb = mysql.connector.connect(
+        mydb = MySQLdb.connect(
             host="localhost",
             user="root",
             password="",
-            database="kapos"
+            database="szavak"
         )
 
-        szam = random.randint(1, 5)
+        szam = random.randint(1, 25)
 
         mycursor = mydb.cursor()
 
-        mycursor.execute("SELECT szo FROM szavak WHERE id='" + str(szam) + "'")
+        mycursor.execute("SELECT " + nyelv + " FROM szavak WHERE id='" + str(szam) + "'")
 
         myresult = mycursor.fetchall()
 
@@ -45,7 +49,10 @@ class StringGeneratorWebService(object):
         for x in myresult:
             szo = x
         # Vissza adja a szót a html file-nak
-        return szo[0]
+        if(szo[0] != ""):
+            return szo[0]
+        else:
+            return "Valami nem mukodik:("
 
     def PUT(self, another_string):
         cherrypy.session['mystring'] = another_string
