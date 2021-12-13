@@ -23,7 +23,6 @@
                         for (var i = 1; i < string.length; i++) {
                             $('p#szo').append("_");
                         }
-
                     });
                 e.preventDefault();
             });
@@ -67,6 +66,8 @@
 
             } else {
                 hibak = hibak + 1
+                $('p#hibak').text("Hibák száma: " + hibak);
+                document.getElementById("kep").src = "kepek/" + hibak + ".png";
                 if (hibak > 6) {
                     alert("vesztettél")
                     location.reload()
@@ -83,11 +84,12 @@
 <body>
 <section id="szo_sec">
     <p id="szo"></p>
+    <hr class="hrtop">
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
-<hr class="hrtop">
 <section id="kep_sec">
-    <img src="kepek/7.png">
+    <img src="kepek/0.png" id="kep">
+    <p id="hibak">Hibák száma: 0</p>
 </section>
 
 <section id="betu_sec">

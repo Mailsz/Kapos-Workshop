@@ -7,6 +7,11 @@ body {
   background-color: #E6E6E6;
 }
 
+.hrtop{
+  width: 90%;
+  background-color: black;
+}
+
 .th {
   text-align: center;
   margin: auto;
@@ -26,16 +31,6 @@ body {
 .betu_div {
   margin: auto;
   text-align: center;
-}
-
-#betu_sec {
-  border: 2px solid lightblue;
-  border-radius: 12px;
-  width: 40%;
-  margin: auto;
-  margin-top: 10vh;
-  background-color: #3D56B2;
-  padding: 10px;
 }
 
 #betu_sec button {
@@ -60,10 +55,6 @@ img {
   color: white;
   border-color: #14279B;
   cursor: pointer;
-}
-
-.hrtop {
-  width: 90%;
 }
 
 #szo {
