@@ -10,16 +10,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script type="text/javascript">
-        var szo = ""
-        var vonalak = ""
+        var szo = "";
+        var vonalak = "";
+        var hibak = 0;
         $(document).ready(function () {
             $("#generate-string").click(function (e) {
                 $.post("/generator", {"length": $("input[name='length']").val()})
                     .done(function (string) {
                         szo = string;
+                        console.log(string);
                         $('p#szo').text("");
                         for (var i = 1; i < string.length; i++) {
-                            $('p#szo').append("_")
+                            $('p#szo').append("_");
                         }
 
                     });
@@ -51,22 +53,24 @@
         });
 
         function button(id) {
-            console.log(document.getElementById(id).textContent);
             betu = document.getElementById(id).textContent.toLowerCase();
             vonal_lista = $('p#szo').text().split("");
             betu_lista = szo.split("");
 
-            if(szo.includes(betu)) {
-                for(var i = 0; i < szo.length; i++) {
-                    if(betu_lista[i] == betu) {
-                        vonal_lista[i] = betu
+            if (szo.includes(betu)) {
+                for (var i = 0; i < szo.length; i++) {
+                    if (betu_lista[i] == betu) {
+                        vonal_lista[i] = betu;
                     }
                 }
                 $('p#szo').text(vonal_lista.join(""));
 
-            }
-            else {
-                console.log("nincs benne")
+            } else {
+                hibak = hibak + 1
+                if (hibak > 6) {
+                    alert("vesztettél")
+                    location.reload()
+                }
             }
         }
 
@@ -78,7 +82,7 @@
 </head>
 <body>
 <section id="szo_sec">
-    <p id="szo">EZ A SZO</p>
+    <p id="szo"></p>
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
 <hr class="hrtop">
@@ -126,6 +130,6 @@
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
     </div>
 </section>
-<button id="generate-string">Give it now!</button>
+<button id="generate-string">Kezdés</button>
 </body>
 </html>
