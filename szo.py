@@ -7,7 +7,7 @@ import MySQLdb
 # Localhost port megadása
 cherrypy.engine.stop()
 cherrypy.server.httpserver = None
-cherrypy.config.update({'server.socket_port': 8080})
+cherrypy.config.update({'server.socket_port': 8081})
 cherrypy.engine.start()
 
 # Megnyitja a html file-t amihez csatolva van
@@ -27,7 +27,6 @@ class StringGeneratorWebService(object):
         # Nyelv beállítása az adatbázishoz. (milyen nyelven kérje a szót)
         nyelv = "magyar"
 
-
         # Csatlakozás az adatbázishoz
         mydb = MySQLdb.connect(
             host="localhost",
@@ -36,14 +35,10 @@ class StringGeneratorWebService(object):
             database="szavak"
         )
 
-        szam = random.randint(1, 25)
-
+        szam = random.randint(1, 17)
         mycursor = mydb.cursor()
-
         mycursor.execute("SELECT " + nyelv + " FROM szavak WHERE id='" + str(szam) + "'")
-
         myresult = mycursor.fetchall()
-
         szo = ''
 
         for x in myresult:
