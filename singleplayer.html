@@ -10,18 +10,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script type="text/javascript">
-
+        var szo = ""
+        var vonalak = ""
         $(document).ready(function () {
-
             $("#generate-string").click(function (e) {
                 $.post("/generator", {"length": $("input[name='length']").val()})
                     .done(function (string) {
+                        szo = string;
                         $('p#szo').text("");
 
-                        for(var i=1; i<string.length;i++) {
-                            $('p#szo').append("_  ")
+                        for (var i = 1; i < string.length; i++) {
+                            $('p#szo').append("_")
                         }
-                        console.log(string)
+
                     });
                 e.preventDefault();
             });
@@ -48,14 +49,41 @@
                     });
                 e.preventDefault();
             });
-
         });
+
+        function button(id) {
+            console.log(document.getElementById(id).textContent);
+            betu = document.getElementById(id).textContent.toLowerCase()
+            console.log($('p#szo').textContent)
+            /*
+            if(szo.includes(betu)) {
+                console.log(szo)
+                index = szo.indexOf(betu)
+                console.log("van benne")
+                szolista = szo.split('');
+                vonallista = vonalak.split('');
+                console.log(szo.length)
+                for(let i = 0; i < szo.length; i++) {
+                    console.log(sz[i])
+                    if(szolista[i] == betu) {
+                        vonallista[i] = vonallista[i].replace(szolista[i])
+                        console.log("van benne ilyen is")
+
+                    }
+                }
+                console.log(lista)
+            }
+            else {
+                console.log("nincs benne")
+            }
+
+             */
+        }
 
     </script>
     <script type="text/javascript">
-        function button(id) {
-            alert(document.getElementById(id).textContent);
-        }
+
+
     </script>
 </head>
 <body>
