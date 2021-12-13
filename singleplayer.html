@@ -18,7 +18,6 @@
                     .done(function (string) {
                         szo = string;
                         $('p#szo').text("");
-
                         for (var i = 1; i < string.length; i++) {
                             $('p#szo').append("_")
                         }
@@ -53,31 +52,22 @@
 
         function button(id) {
             console.log(document.getElementById(id).textContent);
-            betu = document.getElementById(id).textContent.toLowerCase()
-            console.log($('p#szo').textContent)
-            /*
-            if(szo.includes(betu)) {
-                console.log(szo)
-                index = szo.indexOf(betu)
-                console.log("van benne")
-                szolista = szo.split('');
-                vonallista = vonalak.split('');
-                console.log(szo.length)
-                for(let i = 0; i < szo.length; i++) {
-                    console.log(sz[i])
-                    if(szolista[i] == betu) {
-                        vonallista[i] = vonallista[i].replace(szolista[i])
-                        console.log("van benne ilyen is")
+            betu = document.getElementById(id).textContent.toLowerCase();
+            vonal_lista = $('p#szo').text().split("");
+            betu_lista = szo.split("");
 
+            if(szo.includes(betu)) {
+                for(var i = 0; i < szo.length; i++) {
+                    if(betu_lista[i] == betu) {
+                        vonal_lista[i] = betu
                     }
                 }
-                console.log(lista)
+                $('p#szo').text(vonal_lista.join(""));
+
             }
             else {
                 console.log("nincs benne")
             }
-
-             */
         }
 
     </script>
