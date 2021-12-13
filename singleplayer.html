@@ -16,7 +16,12 @@
             $("#generate-string").click(function (e) {
                 $.post("/generator", {"length": $("input[name='length']").val()})
                     .done(function (string) {
-                        $('p#szo').text(string);
+                        $('p#szo').text("");
+
+                        for(var i=1; i<string.length;i++) {
+                            $('p#szo').append("_  ")
+                        }
+                        console.log(string)
                     });
                 e.preventDefault();
             });
@@ -47,10 +52,15 @@
         });
 
     </script>
+    <script type="text/javascript">
+        function button(id) {
+            alert(document.getElementById(id).textContent);
+        }
+    </script>
 </head>
 <body>
 <section id="szo_sec">
-    <U><p id="szo">EZ A SZO</p></U>
+    <p id="szo">EZ A SZO</p>
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
 <hr class="hrtop">
@@ -61,44 +71,43 @@
 <section id="betu_sec">
     <!-- Betű gombok  -->
     <div class="betu_div">
-        <button class="betu">A</button>
-        <button class="betu">Á</button>
-        <button class="betu">B</button>
-        <button class="betu">C</button>
-        <button class="betu">D</button>
-        <button class="betu">E</button>
-        <button class="betu">É</button>
-        <button class="betu">F</button>
-        <button class="betu">G</button>
-        <button class="betu">H</button>
-        <button class="betu">I</button>
-        <button class="betu">Í</button>
-        <button class="betu">J</button>
-        <button class="betu">K</button>
-        <button class="betu">L</button>
-        <button class="betu">M</button>
-        <button class="betu">N</button>
-        <button class="betu">O</button>
-        <button class="betu">Ó</button>
-        <button class="betu">Ö</button>
-        <button class="betu">Ő</button>
-        <button class="betu">P</button>
-        <button class="betu">Q</button>
-        <button class="betu">R</button>
-        <button class="betu">S</button>
-        <button class="betu">T</button>
-        <button class="betu">U</button>
-        <button class="betu">Ú</button>
-        <button class="betu">Ü</button>
-        <button class="betu">Ű</button>
-        <button class="betu">V</button>
-        <button class="betu">W</button>
-        <button class="betu">X</button>
-        <button class="betu">Y</button>
-        <button class="betu">Z</button>
+        <button id="a" class="betu" onclick="button(this.id)">A</button>
+        <button id="á" class="betu" onclick="button(this.id)">Á</button>
+        <button id="b" class="betu" onclick="button(this.id)">B</button>
+        <button id="c" class="betu" onclick="button(this.id)">C</button>
+        <button id="d" class="betu" onclick="button(this.id)">D</button>
+        <button id="e" class="betu" onclick="button(this.id)">E</button>
+        <button id="é" class="betu" onclick="button(this.id)">É</button>
+        <button id="f" class="betu" onclick="button(this.id)">F</button>
+        <button id="g" class="betu" onclick="button(this.id)">G</button>
+        <button id="h" class="betu" onclick="button(this.id)">H</button>
+        <button id="i" class="betu" onclick="button(this.id)">I</button>
+        <button id="í" class="betu" onclick="button(this.id)">Í</button>
+        <button id="j" class="betu" onclick="button(this.id)">J</button>
+        <button id="k" class="betu" onclick="button(this.id)">K</button>
+        <button id="l" class="betu" onclick="button(this.id)">L</button>
+        <button id="m" class="betu" onclick="button(this.id)">M</button>
+        <button id="n" class="betu" onclick="button(this.id)">N</button>
+        <button id="o" class="betu" onclick="button(this.id)">O</button>
+        <button id="ó" class="betu" onclick="button(this.id)">Ó</button>
+        <button id="ö" class="betu" onclick="button(this.id)">Ö</button>
+        <button id="ő" class="betu" onclick="button(this.id)">Ő</button>
+        <button id="p" class="betu" onclick="button(this.id)">P</button>
+        <button id="q" class="betu" onclick="button(this.id)">Q</button>
+        <button id="r" class="betu" onclick="button(this.id)">R</button>
+        <button id="s" class="betu" onclick="button(this.id)">S</button>
+        <button id="t" class="betu" onclick="button(this.id)">T</button>
+        <button id="u" class="betu" onclick="button(this.id)">U</button>
+        <button id="ú" class="betu" onclick="button(this.id)">Ú</button>
+        <button id="ü" class="betu" onclick="button(this.id)">Ü</button>
+        <button id="ű" class="betu" onclick="button(this.id)">Ű</button>
+        <button id="v" class="betu" onclick="button(this.id)">V</button>
+        <button id="w" class="betu" onclick="button(this.id)">W</button>
+        <button id="x" class="betu" onclick="button(this.id)">X</button>
+        <button id="y" class="betu" onclick="button(this.id)">Y</button>
+        <button id="z" class="betu" onclick="button(this.id)">Z</button>
     </div>
 </section>
-    <button id="generate-string">Give it now!</button>
-</body>
+<button id="generate-string">Give it now!</button>
 </body>
 </html>
