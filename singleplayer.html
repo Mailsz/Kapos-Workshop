@@ -57,15 +57,15 @@
                 betu = document.getElementById(id).textContent.toLowerCase();
                 vonal_lista = $('p#szo').text().split("");
                 betu_lista = szo.split("");
-                document.getElementById(id).remove();
 
                 if (szo.includes(betu)) {
-
                     for (var i = 0; i < szo.length; i++) {
                         if (betu_lista[i] == betu) {
                             vonal_lista[i] = betu;
                         }
                     }
+                    document.getElementById(id).style.backgroundColor = "green";
+                    document.getElementById(id).disabled = true;
                     $('p#szo').text(vonal_lista.join(""));
                     console.log($('p#szo').text())
                     console.log(szo)
@@ -76,6 +76,8 @@
                         location.reload();
                     }
                 } else {
+                    document.getElementById(id).style.backgroundColor = "red";
+                    document.getElementById(id).disabled = true;
                     hibak = hibak + 1
                     $('p#hibak').text("Hibák száma: " + hibak);
                     document.getElementById("kep").src = "kepek/" + hibak + ".png";
