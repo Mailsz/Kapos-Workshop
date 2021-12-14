@@ -52,39 +52,43 @@
         });
 
         function button(id) {
-            betu = document.getElementById(id).textContent.toLowerCase();
-            vonal_lista = $('p#szo').text().split("");
-            betu_lista = szo.split("");
-            document.getElementById(id).remove();
+            if (szo != "") {
+                betu = document.getElementById(id).textContent.toLowerCase();
+                vonal_lista = $('p#szo').text().split("");
+                betu_lista = szo.split("");
+                document.getElementById(id).remove();
 
-            if (szo.includes(betu)) {
-                for (var i = 0; i < szo.length; i++) {
-                    if (betu_lista[i] == betu) {
-                        vonal_lista[i] = betu;
+                if (szo.includes(betu)) {
+
+                    for (var i = 0; i < szo.length; i++) {
+                        if (betu_lista[i] == betu) {
+                            vonal_lista[i] = betu;
+                        }
+                    }
+                    $('p#szo').text(vonal_lista.join(""));
+                    console.log($('p#szo').text())
+                    console.log(szo)
+                    console.log($('p#szo').text() === szo);
+
+                    if(($('p#szo').text().includes("_") == false)) {
+                        alert("Nyertél");
+                        location.reload();
                     }
                 }
-                $('p#szo').text(vonal_lista.join(""));
-
-                if ($('p#szo').text() == szo) {
-                    alert("nyertél")
-                    location.reload()
-                }
-
-            } else {
-                hibak = hibak + 1
-                $('p#hibak').text("Hibák száma: " + hibak);
-                document.getElementById("kep").src = "kepek/" + hibak + ".png";
-                if (hibak > 6) {
-                    alert("vesztettél")
-                    location.reload()
+                else {
+                    hibak = hibak + 1
+                    $('p#hibak').text("Hibák száma: " + hibak);
+                    document.getElementById("kep").src = "kepek/" + hibak + ".png";
+                    if (hibak > 6) {
+                        alert("vesztettél");
+                        location.reload();
+                    }
                 }
             }
+            else {
+                alert("Nyomj a Kezdés gombra a játék kezdéséhez!")
+            }
         }
-
-    </script>
-    <script type="text/javascript">
-
-
     </script>
 </head>
 <body>
