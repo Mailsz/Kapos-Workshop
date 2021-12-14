@@ -6,26 +6,31 @@
     <!-- FontAwesome és Css link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fooldal.css">
+    <!-- JavaScript és JQuery link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   </head>
   <body>
     <h1>Akasztófa</h1>
     <div class="gombok">
       <div class="inditas">
         <!-- Singleplayer Gomb -->
-        <a href="singleplayer.html"><button type="button" name="button">Egyjátékos</button></a>
+        <button type="button" name="egyjatekos">Egyjátékos</button>
         <br>
         <!-- Multiplayer Gomb -->
-        <button type="button" id="mp" name="button">Többjátékos</button>
+        <button type="button" id="mp" name="tobbjatekos">Többjátékos</button>
       </div>
       <div class="belepes">
         <!-- Login Gomb -->
-        <a href="login.html"><button type="button" name="button">Bejelentkezés</button></a>
+        <button type="button" name="bejelentkezes">Bejelentkezés</button>
         <br>
         <!-- Register Gomb -->
-        <a href="Regisztralas.html"><button type="button" name="button">Regisztrálás</button></a>
+        <button type="button" name="regisztralas">Regisztrálás</button>
       </div>
       <!-- Settings Gomb -->
-      <a href="beallitasok.html"><button type="button" name="button"><i class="fa fa-gear"></i></button></a>
+      <button type="button" name="beallitasok"><i class="fa fa-gear"></i></button>
     </div>
+
+    <script type="text/javascript" src="js/iranyitas.js"></script>
   </body>
 </html>
