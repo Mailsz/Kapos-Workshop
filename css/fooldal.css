@@ -24,6 +24,7 @@ button{
   letter-spacing: 1px;
   opacity: 0.86;
   transition: 0.5s;
+  box-shadow: 0 10px #999;
 }
 button:hover{
   width: 65vh;
@@ -32,6 +33,20 @@ button:hover{
   background-color: #5C7AEA;
   letter-spacing:2px;
   opacity: 1;
+
+}
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#mp{
+  background: repeating-linear-gradient(45deg,#FFFF00,#FFFF00 20px,#000000 20px ,#000000 40px);
+  opacity: 0.8;
+  color:white;
+  cursor: not-allowed;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+
 
 }
 
