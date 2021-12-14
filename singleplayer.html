@@ -17,7 +17,7 @@
             $("#generate-string").click(function (e) {
                 $.post("/generator", {"length": $("input[name='length']").val()})
                     .done(function (string) {
-                        szo = string;
+                        szo = string.toLowerCase();
                         console.log(string);
                         $('p#szo').text("");
                         for (var i = 1; i < string.length; i++) {
@@ -55,6 +55,7 @@
             betu = document.getElementById(id).textContent.toLowerCase();
             vonal_lista = $('p#szo').text().split("");
             betu_lista = szo.split("");
+            document.getElementById(id).remove();
 
             if (szo.includes(betu)) {
                 for (var i = 0; i < szo.length; i++) {
@@ -63,6 +64,11 @@
                     }
                 }
                 $('p#szo').text(vonal_lista.join(""));
+
+                if ($('p#szo').text() == szo) {
+                    alert("nyertél")
+                    location.reload()
+                }
 
             } else {
                 hibak = hibak + 1
@@ -84,10 +90,10 @@
 <body>
 <section id="szo_sec">
     <p id="szo"></p>
-    <hr class="hrtop">
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
 <section id="kep_sec">
+    <hr class="hrtop">
     <img src="kepek/0.png" id="kep">
     <p id="hibak">Hibák száma: 0</p>
 </section>
