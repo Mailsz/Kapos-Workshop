@@ -23,7 +23,7 @@ button{
   font-size: 20px;
   letter-spacing: 1px;
   opacity: 0.86;
-  transition: 0.5s;
+  transition: 0.2s;
   box-shadow: 0 10px #999;
 }
 button:hover{
