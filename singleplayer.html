@@ -23,6 +23,7 @@
                         for (var i = 1; i < string.length; i++) {
                             $('p#szo').append("_");
                         }
+                        document.getElementById("generate-string").remove();
                     });
                 e.preventDefault();
             });
@@ -70,22 +71,20 @@
                     console.log(szo)
                     console.log($('p#szo').text() === szo);
 
-                    if(($('p#szo').text().includes("_") == false)) {
+                    if (($('p#szo').text().includes("_") == false)) {
                         alert("Nyertél");
                         location.reload();
                     }
-                }
-                else {
+                } else {
                     hibak = hibak + 1
                     $('p#hibak').text("Hibák száma: " + hibak);
                     document.getElementById("kep").src = "kepek/" + hibak + ".png";
                     if (hibak > 6) {
-                        alert("vesztettél, a szó a(z) " + szo + "volt" );
+                        alert("vesztettél, a szó a(z) " + szo + "volt");
                         location.reload();
                     }
                 }
-            }
-            else {
+            } else {
                 alert("Nyomj a Kezdés gombra a játék kezdéséhez!")
             }
         }
