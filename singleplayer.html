@@ -90,6 +90,11 @@
                 alert("Nyomj a Kezdés gombra a játék kezdéséhez!")
             }
         }
+
+        window.onbeforeunload = function(event)
+        {
+          return confirm("Confirm refresh");
+        };
     </script>
 </head>
 <body>
