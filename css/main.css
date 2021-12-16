@@ -41,7 +41,7 @@ body {
 }
 
 #betu_sec button {
-    margin: 3px;
+    margin: 4px;
 }
 
 img {
@@ -62,7 +62,7 @@ img {
 
     color: #14279B ;
     border-color: #14279B;
-    width: 33px;
+    width: 30px;
     letter-spacing:2px;
     cursor: pointer;
     box-shadow: 0 5px #999;
