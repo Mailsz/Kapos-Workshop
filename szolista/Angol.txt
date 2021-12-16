@@ -3,3 +3,56 @@ Door
 Apple
 Pineapple
 Gift
+Table
+Arrogant
+Action
+Mouse
+Jumper
+Polo
+Shirt
+Jacket
+Suit
+Computer
+Laptop
+Blackboard
+Chair
+Ceiling
+Monitor
+Felt-tip pen
+Catch
+Cabinet
+Volume
+Brightness
+Explosion
+Soap
+Tap
+Picture frame
+Keyboard
+Weather
+Floor
+School bag
+Watch
+Radiator
+Element
+Pine tree
+Oak tree
+Birch
+Painting
+King
+Door handle
+Roof
+Hard
+Doors and windows
+Lamp
+Flashlight
+Antenna
+Pine thorns
+School book
+Magnifying glass
+Newsprint
+Clockwise
+Battery
+Charging cable
+Timetable
+Banana tree
+Projector
