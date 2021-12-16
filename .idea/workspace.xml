@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/singleplayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/singleplayer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szolista/Magyar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/szolista/Magyar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dusza-Workshop.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Dokumentumok/Dusza-Workshop.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gamen\Desktop\info\Kapos-Workshop\Dokumentumok" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.szo">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -136,15 +140,28 @@
       <workItem from="1639464812012" duration="5669000" />
       <workItem from="1639470641876" duration="356000" />
       <workItem from="1639474545444" duration="4282000" />
+      <workItem from="1639494826887" duration="1009000" />
+      <workItem from="1639555352860" duration="920000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Kapos_Workshop$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1639157221847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Kapos_Workshop$main.coverage" NAME="main Coverage Results" MODIFIED="1639240486708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$szo.coverage" NAME="szo Coverage Results" MODIFIED="1639480485792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Kapos_Workshop$szo.coverage" NAME="szo Coverage Results" MODIFIED="1639494836274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
