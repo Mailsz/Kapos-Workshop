@@ -3,3 +3,56 @@ Ovi
 Omena
 Ananas
 Lahja
+Pöytä
+Ylimielinen
+Toiminta
+Hiiri
+Jumpperi
+Polo
+Paita
+Takki
+Puku
+Tietokone
+Kannettava tietokone
+Liitutaulu
+Tuoli
+Katto
+Monitori
+Huopakynä
+Saada kiinni
+Kaappi
+Äänenvoimakkuus
+Kirkkaus
+Räjähdys
+Saippua
+Napauta
+Kuvakehys
+Näppäimistö
+Sää
+Lattia
+Koululaukku
+Katsella
+Jäähdytin
+Elementti
+mänty
+tammi
+Koivu
+Maalaus
+kuningas
+Ovenkahva
+Katto
+Kovaa
+Ovet ja ikkunat
+Lamppu
+Taskulamppu
+Antenni
+Männyn piikkejä
+Koulukirja
+Suurennuslasi
+Sanomalehtipaperi
+Myötäpäivään
+Akku
+Latauskaapeli
+Aikataulu
+Banaanipuu
+Projektori
