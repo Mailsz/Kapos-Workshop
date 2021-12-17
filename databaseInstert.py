@@ -29,7 +29,8 @@ for i in range(58):
     finn = finnszavakLista[i]
     print(magyar, angol, finn)
     mycursor = mydb.cursor()
-    mycursor.execute("INSERT INTO szavak (magyar, angol, finn) VALUES('" + magyar + "', '" + angol + "', '" + finn + "')")
+    mycursor.execute(
+        "INSERT INTO szavak (magyar, angol, finn) VALUES('" + magyar + "', '" + angol + "', '" + finn + "')")
     mydb.commit()
 
 """

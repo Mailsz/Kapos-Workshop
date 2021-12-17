@@ -10,11 +10,13 @@ cherrypy.server.httpserver = None
 cherrypy.config.update({'server.socket_port': 8092})
 cherrypy.engine.start()
 
+
 # Megnyitja a html file-t amihez csatolva van
 class StringGenerator(object):
     @cherrypy.expose
     def index(self):
         return open('singleplayer.html', encoding="utf-8")
+
 
 @cherrypy.expose
 class StringGeneratorWebService(object):
@@ -44,7 +46,7 @@ class StringGeneratorWebService(object):
         for x in myresult:
             szo = x
         # Vissza adja a szót a html file-nak
-        if(szo[0] != ""):
+        if (szo[0] != ""):
             return szo[0]
         else:
             return "Valami nem mukodik:("
@@ -54,6 +56,7 @@ class StringGeneratorWebService(object):
 
     def DELETE(self):
         cherrypy.session.pop('mystring', None)
+
 
 if __name__ == '__main__':
     # Konfiguráció az elérési utakhoz
