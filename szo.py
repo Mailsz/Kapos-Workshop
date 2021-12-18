@@ -7,7 +7,7 @@ import MySQLdb
 # Localhost port megadása
 cherrypy.engine.stop()
 cherrypy.server.httpserver = None
-cherrypy.config.update({'server.socket_port': 8092})
+cherrypy.config.update({'server.socket_port': 8001})
 cherrypy.engine.start()
 
 

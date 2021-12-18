@@ -1,6 +1,6 @@
 $("button[name=egyjatekos]").click(function() {
   setTimeout(function() {
-    window.location.href = "http://127.0.0.1:8092/"
+    window.location.href = "http://127.0.0.1:8001/"
 }, 100);
 })
 
