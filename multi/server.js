@@ -1,0 +1,1 @@
+//ide nagyon nagy agyfasz fog sajnos kerulni:(
