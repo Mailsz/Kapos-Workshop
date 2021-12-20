@@ -14,11 +14,14 @@
   <body>
 
 
-    <form id="form" method="POST">
+    <form id="form" method="POST" action="belepes/register.php">
 
       <h1 style="text-align: center">Regisztráció</h1>
       <br>
       <div class="container">
+        <!-- név megadása mező  -->
+        <label for="email"><b>Név</b></label>
+        <input type="text" placeholder="Név" name="name" id="email" required>
         <!-- Email megadása mező  -->
         <label for="email"><b>Email</b></label>
         <input type="email" placeholder="Email" name="email" id="email" required>
@@ -28,7 +31,7 @@
 
         <!-- Jelszó megerősítése mező  -->
         <label for="psw"><b>Jelszó megerősítése</b></label>
-        <input type="password" placeholder="Jelszó megerősítése" name="psw" id="psw" required>
+        <input type="password" placeholder="Jelszó megerősítése" name="psw_r" id="psw" required>
 
 
 
