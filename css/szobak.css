@@ -19,3 +19,18 @@ h1 {
   text-align: center;
   font-size: 32px;
 }
+button {
+  text-align: center;
+  font-size: 15px;
+  border: none;
+  background: none;
+  color: #3e8e41;
+}
+
+button:hover {
+  font-size: 17px;
+}
+
+.csatlakozas {
+  text-align: center;
+}
