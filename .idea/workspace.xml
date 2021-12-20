@@ -6,16 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beallitasok.html" beforeDir="false" afterPath="$PROJECT_DIR$/beallitasok.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/iranyitas.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/iranyitas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/singleplayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/singleplayer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szo.py" beforeDir="false" afterPath="$PROJECT_DIR$/szo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,14 +36,19 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="226FUG0Z1EkUMFz06rZM8c0IPkJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
   </component>
   <component name="RecentsManager">
@@ -178,6 +187,7 @@
       <workItem from="1639767258242" duration="224000" />
       <workItem from="1639814405737" duration="1228000" />
       <workItem from="1639821220113" duration="876000" />
+      <workItem from="1639983969303" duration="1340000" />
     </task>
     <servers />
   </component>
