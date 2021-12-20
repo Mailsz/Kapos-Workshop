@@ -12,7 +12,7 @@ $("button[name=bejelentkezes]").click(function() {
 
 $("button[name=regisztralas]").click(function() {
   setTimeout(function() {
-    window.location.href = "regisztralas.html"
+    window.location.href = "regisztralas.php"
 }, 100);
 })
 
