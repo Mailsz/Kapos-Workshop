@@ -6,8 +6,6 @@ include_once '../db.php';
   $psw = $_POST['psw'];
   $psw_r = $_POST['psw_r'];
 
-  $salt = openssl_random_pseudo_bytes(64);
-  $hash = hash('sha256',$salt  .  $psw);
 
   //foglalt-e
   $sql = "SELECT * from felhasznalok where email ='$email'";
@@ -21,8 +19,12 @@ include_once '../db.php';
     echo "<script>window.location.href='../regisztralas.php'</script>";
   }
   else {
-    $sql = "INSERT INTO felhasznalok (nev,email,jelszo) VALUES ('$nev','$email','$hash')";
+    $salt = openssl_random_pseudo_bytes(64);
+    $hash = hash('sha256',$salt  .  $psw);
+    $saltForDb = bin2hex($salt);
+    $sql = "INSERT INTO felhasznalok (nev,email,jelszo,salt) VALUES ('$nev','$email','$hash','$saltForDb')";
     mysqli_query($connect, $sql);
+    $_SESSION['felhasznalo']=$saltForDb;
     echo "<script>window.location.href='../index.html'</script>";
   }
  ?>
