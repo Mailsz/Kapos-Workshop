@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Regisztralas.php" beforeDir="false" afterPath="$PROJECT_DIR$/Regisztralas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,8 +52,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -148,18 +155,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.szo" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.databaseInstert" />
       <item itemvalue="JavaScript Debug.szoba.html" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.szoba.html" />
-        <item itemvalue="Python.szo" />
-        <item itemvalue="Python.databaseInstert" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +192,8 @@
       <workItem from="1639814405737" duration="1228000" />
       <workItem from="1639821220113" duration="876000" />
       <workItem from="1639983969303" duration="5842000" />
+      <workItem from="1640073343865" duration="429000" />
+      <workItem from="1640073834175" duration="49000" />
     </task>
     <servers />
   </component>
@@ -208,11 +210,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1639157221847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$databaseInstert.coverage" NAME="databaseInstert Coverage Results" MODIFIED="1639731398691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$main.coverage" NAME="main Coverage Results" MODIFIED="1639240486708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$szo.coverage" NAME="szo Coverage Results" MODIFIED="1639988629340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
