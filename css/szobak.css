@@ -1,19 +1,29 @@
 table {
   margin: auto;
   font-family: arial, sans-serif;
+  border: 5px solid black;
   border-collapse: collapse;
   width: 90%;
+  border-radius: 30px;
 }
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+body{
+  background-color: #E6E6E6;
+}
+td, th {;
+  text-align: center;
   padding: 8px;
+
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+tr {
+  background-color: #3D56B2;
+  opacity: 80%;
 }
+
+#felso{
+border-bottom: 2px solid black;
+}
+
 
 h1 {
   text-align: center;
@@ -22,13 +32,18 @@ h1 {
 button {
   text-align: center;
   font-size: 15px;
-  border: none;
-  background: none;
+  height: 3vh;
+  width: 10vw;
+
+  border: 2px solid gray;
+  border-radius: 10px;
+  background: white;
   color: #3e8e41;
+  transition: 0.2s;
 }
 
 button:hover {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .csatlakozas {
