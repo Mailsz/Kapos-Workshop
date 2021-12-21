@@ -37,7 +37,7 @@ hr {
 }
 
 /* Set a style for the submit button */
-.registerbtn {
+#login {
   background-color: #04AA6D;
   color: white;
   padding: 16px 20px;
@@ -45,11 +45,18 @@ hr {
   border: none;
   cursor: pointer;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.2;
+  box-shadow: 0 10px #999;
 }
 
-.registerbtn:hover {
+#login:hover {
   opacity: 1;
+}
+
+#login:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* Add a blue text color to links */

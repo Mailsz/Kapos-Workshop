@@ -94,15 +94,26 @@ hr {
   margin: 8px 0;
   border: 2px solid #E6E6E6;
   cursor: pointer;
-  width: 100%;
-  opacity: 0.78;
-  transition: 0.3s;
-  border-radius: 15px
+  width: 90%;
+	height: 8%;
+  opacity: 0.8;
+  transition: 0.15s;
+  border-radius: 15px;
+	box-shadow: 0 10px #999;
 }
 
 .registerbtn:hover {
   opacity:1;
+	width: 95%;
+	height: 10%;
+	background-color: #5C7AEA;
 
+}
+
+.registerbtn:active{
+	  background-color: #3e8e41;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
 }
 /*Link színe*/
 a {
@@ -125,4 +136,10 @@ a {
 
 body {
 	text-align: center;
+}
+
+#hibauzenet{
+		font-size: 32px;
+		color: black;
+
 }

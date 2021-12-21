@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Akasztófa</title>
+    <title>Hang Out!</title>
     <!-- CSS link  -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,7 +20,7 @@
                         szo = string.toLowerCase();
                         console.log(string);
                         $('p#szo').text("");
-                        for (var i = 1; i < string.length; i++) {
+                        for (var i = 0; i < string.length; i++) {
                             $('p#szo').append("_");
                         }
                         document.getElementById("generate-string").remove();
@@ -72,7 +72,7 @@
                     console.log($('p#szo').text() === szo);
 
                     if (($('p#szo').text().includes("_") == false)) {
-                        alert("Nyertél");
+                        alert("Nyertél!");
                         location.reload();
                     }
                 } else {
@@ -82,7 +82,7 @@
                     $('p#hibak').text("Hibák száma: " + hibak);
                     document.getElementById("kep").src = "kepek/" + hibak + ".png";
                     if (hibak > 6) {
-                        alert("vesztettél, a szó a(z) " + szo + "volt");
+                        alert("Vesztettél, a szó a(z) " + szo + " volt!");
                         location.reload();
                     }
                 }
@@ -91,9 +91,8 @@
             }
         }
 
-        window.onbeforeunload = function(event)
-        {
-          return confirm("Confirm refresh");
+        window.onbeforeunload = function (event) {
+            return confirm("Confirm refresh");
         };
     </script>
 </head>

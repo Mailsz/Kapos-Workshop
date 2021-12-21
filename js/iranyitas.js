@@ -1,6 +1,6 @@
 $("button[name=egyjatekos]").click(function() {
   setTimeout(function() {
-    window.location.href = "singleplayer.html"
+    window.location.href = "http://127.0.0.1:8001/"
 }, 100);
 })
 
@@ -12,7 +12,7 @@ $("button[name=bejelentkezes]").click(function() {
 
 $("button[name=regisztralas]").click(function() {
   setTimeout(function() {
-    window.location.href = "regisztralas.html"
+    window.location.href = "regisztralas.php"
 }, 100);
 })
 
