@@ -25,6 +25,6 @@ include_once '../db.php';
     $sql = "INSERT INTO felhasznalok (nev,email,jelszo,salt) VALUES ('$nev','$email','$hash','$saltForDb')";
     mysqli_query($connect, $sql);
     $_SESSION['felhasznalo']=$saltForDb;
-    echo "<script>window.location.href='../index.html'</script>";
+    echo "<script>window.location.href='../index.php'</script>";
   }
  ?>
