@@ -3,11 +3,30 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
+    <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/Kapos-Workshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kapos-Workshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/letrehozas.html" beforeDir="false" afterPath="$PROJECT_DIR$/letrehozas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/szolista/nehezseg.py" beforeDir="false" afterPath="$PROJECT_DIR$/szolista/nehezseg.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +71,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../xampp/htdocs/Kapos-Workshop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -62,7 +81,7 @@
       <recent name="C:\Users\gamen\Desktop\info\Kapos-Workshop\Dokumentumok" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.szo">
+  <component name="RunManager" selected="Python.nehezseg">
     <configuration name="szoba.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Kapos-Workshop/szoba.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -132,6 +151,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="nehezseg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Kapos-Workshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/szolista" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/szolista/nehezseg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="szo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Kapos-Workshop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,16 +195,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.szoba.html" />
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.databaseInstert" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.nehezseg" />
       <item itemvalue="Python.szo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.nehezseg" />
         <item itemvalue="Python.szo" />
-        <item itemvalue="JavaScript Debug.szoba.html" />
       </list>
     </recent_temporary>
   </component>
@@ -215,11 +255,28 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1639157221847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$databaseInstert.coverage" NAME="databaseInstert Coverage Results" MODIFIED="1639731398691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$main.coverage" NAME="main Coverage Results" MODIFIED="1639240486708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$szo.coverage" NAME="szo Coverage Results" MODIFIED="1640075084150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1640102425460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1640102425460" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1640998998947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640998998947" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1640998998947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640998998947" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1640998998947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640998998947" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1640998998947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640998998947" />
   </component>
 </project>
