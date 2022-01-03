@@ -6,7 +6,7 @@ $("button[name=egyjatekos]").click(function() {
 
 $("button[name=bejelentkezes]").click(function() {
   setTimeout(function() {
-    window.location.href = "login.html"
+    window.location.href = "login.php"
 }, 100);
 })
 
