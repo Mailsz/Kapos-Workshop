@@ -2,7 +2,7 @@ import os, os.path
 import random
 import string
 import cherrypy
-import MySQLdb
+from MySQLdb import connect
 
 # Localhost port megadása
 cherrypy.engine.stop()
@@ -30,7 +30,7 @@ class StringGeneratorWebService(object):
         nyelv = "magyar"
 
         # Csatlakozás az adatbázishoz
-        mydb = MySQLdb.connect(
+        mydb = connect(
             host="localhost",
             user="root",
             password="",
