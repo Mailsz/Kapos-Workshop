@@ -12,10 +12,10 @@ abc=string.ascii_lowercase
 szavak2=[]
 
 for szo in szavak:
-    temp=""
+    temp = ""
     for i in range(len(abc)):
-        if(abc[i] in szo):
-            temp+=abc[i]
+        if (abc[i] in szo):
+            temp += abc[i]
     szavak2.append(temp)
 file.close()
 
