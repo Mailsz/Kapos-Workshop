@@ -15,7 +15,8 @@
           $randId = rand(1,58);
           $sql = "SELECT magyar FROM szavak WHERE id='$randId'";
           $r = mysqli_query($connect,$sql);
-          $_SESSION['spSzo'] =  strtolower(mysqli_fetch_assoc($r)['magyar']);
+          $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['magyar']);
+          $_SESSION['spHiba'] = 0;
           echo $_SESSION['spSzo'];
          ?>
 
@@ -116,6 +117,6 @@
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
     </div>
 </section>
-<script type="text/javascript" src="js/betuSP.js"></script>
+<?php include_once 'js/betuSP.php' ?>
 </body>
 </html>
