@@ -16,20 +16,19 @@
 <body>
 <h1>Hang Out!</h1>
 <!-- felhasznalonev kiirasa -->
-<h3><?php
+<h3 id="felhNev"><?php
 if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo']!="") {
   $salt = $_SESSION['felhasznalo'];
   $sql = "SELECT nev FROM felhasznalok WHERE salt='$salt'";
   mysqli_query($connect,"SET NAMES 'utf8'");
   $r = mysqli_query($connect, $sql);
   echo mysqli_fetch_assoc($r)['nev'];
-
 }
   ?></h3>
   <!-- logout gomb ha bevan jelentkezve -->
   <?php
     if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo']!="") {
-      echo "<form method='POST' action='belepes/logout.php'><button name='logout' type='submit'>Kijelentkezés</button></form>";
+      echo "<form method='POST' action='belepes/logout.php'><button name='logout' type='submit' id='logout'>Kijelentkezés</button></form>";
     }
    ?>
 <div class="gombok">
