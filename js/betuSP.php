@@ -1,8 +1,9 @@
 <?php
   echo '
     <script>
+    szo = "'.$_SESSION['spSzo'].'";
     for (var i = 0; i < szo.length; i++) {
-      $("#szo").append("_")
+        $(\'#szo\').append("_");
     }
 
     function button(id) {
