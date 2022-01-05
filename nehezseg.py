@@ -1,8 +1,8 @@
 import string
-
+import MySQLdb
 # import MySQLdb
 
-file = open("Angol.txt", "r", encoding="utf-8")
+file = open("szolista/Angol.txt", "r", encoding="utf-8")
 # szavak beolvasása
 szavak = []
 for i in file:
@@ -45,7 +45,7 @@ mydb = MySQLdb.connect(
     host="localhost",
     user="root",
     password="",
-    database="dusza"
+    database="akasztofa"
 )
 
 j = 0
@@ -53,15 +53,15 @@ for szam in ertekek:
     mycursor = mydb.cursor()
     if (szam < 0.3):
         mycursor.execute(
-            "INSERT INTO konnyu_angol (szo) VALUES('" + szavak[j] + "')")
+            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "','angol','konnyu')")
         mydb.commit()
     elif szam >= 0.3 and szam < 0.5:
         mycursor.execute(
-            "INSERT INTO kozepes_angol (szo) VALUES('" + szavak[j] + "')")
+            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "','angol','kozepes')")
         mydb.commit()
     elif szam >= 0.5:
         mycursor.execute(
-            "INSERT INTO nehez_angol (szo) VALUES('" + szavak[j] + "')")
+            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "','angol','nehez')")
         mydb.commit()
     j += 1
 

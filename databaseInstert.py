@@ -5,7 +5,7 @@ mydb = MySQLdb.connect(
     host="localhost",
     user="root",
     password="",
-    database="szavak"
+    database="akasztofa"
 )
 
 magyarszavak = open("szolista/Magyar.txt", "r", encoding="utf-8")

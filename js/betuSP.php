@@ -13,6 +13,7 @@
       xhr.open(\'POST\',\'spBackend/betu.php\',true);
       xhr.setRequestHeader(\'Content-type\',\'application/x-www-form-urlencoded\');
       xhr.onload = function() {
+        console.log(this.responseText)
         if (this.responseText.split("|")[0]==0) {
           $("button#"+betu).css("backgroundColor","red")
           var hibak = this.responseText.split("|")[1]

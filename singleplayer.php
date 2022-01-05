@@ -13,9 +13,10 @@
         <?php
           include_once 'db.php';
           $randId = rand(1,58);
-          $sql = "SELECT magyar FROM szavak WHERE id='$randId'";
+          $sql = "SELECT szo FROM szavak WHERE id='$randId'";
+          mysqli_query($connect,"SET NAMES 'utf8'");
           $r = mysqli_query($connect,$sql);
-          $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['magyar']);
+          $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
           $_SESSION['spHiba'] = 0;
           echo $_SESSION['spSzo'];
          ?>
