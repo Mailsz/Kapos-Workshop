@@ -15,7 +15,7 @@ cherrypy.engine.start()
 class StringGenerator(object):
     @cherrypy.expose
     def index(self):
-        return open('singleplayer.html', encoding="utf-8")
+        return open('singleplayer.php', encoding="utf-8")
 
 
 @cherrypy.expose

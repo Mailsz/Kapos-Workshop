@@ -1,12 +1,21 @@
 import string
 import MySQLdb
 
-file=open("Angol.txt", "r", encoding="utf-8")
+file=open("Magyar.txt", "r", encoding="utf-8")
 #szavak beolvasása
 szavak=[]
 for i in file:
     szavak.append(i.strip("\n").lower())
-abc=string.ascii_lowercase
+
+betuk=open("magyarbetuk", "r", encoding="utf-8")
+abc=[]
+gyakorisag=[]
+beolv=[]
+for i in betuk:
+    beolv.append(i.strip('\n').split())
+for j in beolv:
+    gyakorisag.append(float(j[1]))
+    abc.append(j[0])
 
 #szavak betűkké változtatása
 szavak2=[]
@@ -19,25 +28,18 @@ for szo in szavak:
     szavak2.append(temp)
 file.close()
 
-#szavak értékekké változtatása betűik gyakoriság alapján
-gyakor=open("betugyakorisag", "r", encoding="utf-8")
-ertekek=[]
-gyakorisag=[]
-#gyakorisag beolvasása
-for i in gyakor:
-    gyakorisag.append(float(i.strip("\n")))
-#lista feltolese 0-kal
-for i in range(len(szavak)):
-    ertekek.append(0)
-
 #szavak ertekenek kiszamolasa
+ertekek=[]
+for i in szavak:
+    ertekek.append(0)
 i=0
 for string in szavak2:
     for j in range(len(string)):
-        ertekek[i] +=  0.125 - gyakorisag[abc.find(string[j])]
+        ertekek[i] +=  12.6 - gyakorisag[abc.index(string[j])]
     ertekek[i]=round(ertekek[i], 3)
     i+=1
 print(ertekek)
+print(szavak)
 #besorolas
 
 mydb = MySQLdb.connect(
@@ -50,19 +52,17 @@ mydb = MySQLdb.connect(
 j=0
 for szam in ertekek:
     mycursor = mydb.cursor()
-    if (szam < 0.3):
+    if (szam < 30):
         mycursor.execute(
-            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'angol', 'konnyu')")
+            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'konnyu')")
         mydb.commit()
-    elif szam >= 0.3 and szam < 0.5:
+    elif szam >= 30 and szam < 50:
         mycursor.execute(
-            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'angol', 'kozepes')")
+            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'kozepes')")
         mydb.commit()
-    elif szam >= 0.5:
+    elif szam >= 50:
         mycursor.execute(
-            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'angol', 'nehez')")
+            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'nehez')")
         mydb.commit()
     j += 1
-
 print(mycursor.rowcount, "record inserted.")
-

@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Kapos-Workshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kapos-Workshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/szo.py" beforeDir="false" afterPath="$PROJECT_DIR$/szo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/szolista/nehezseg.py" beforeDir="false" afterPath="$PROJECT_DIR$/szolista/nehezseg.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,9 +90,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.nehezseg">
-    <configuration name="szoba.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Kapos-Workshop/szoba.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/multi/server.js" working-dir="$PROJECT_DIR$/multi">
       <method v="2" />
     </configuration>
@@ -107,6 +107,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="magyarnehezseg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Kapos-Workshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/szolista" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/szolista/magyarnehezseg.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,9 +188,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Python\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -204,15 +226,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.szoba.html" />
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.pewds" />
       <item itemvalue="Python.nehezseg" />
       <item itemvalue="Python.szo" />
+      <item itemvalue="Python.magyarnehezseg" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.nehezseg" />
+        <item itemvalue="Python.magyarnehezseg" />
         <item itemvalue="Python.szo" />
       </list>
     </recent_temporary>
@@ -256,6 +279,10 @@
       <workItem from="1640555333505" duration="26000" />
       <workItem from="1641193202179" duration="1876000" />
       <workItem from="1641195306075" duration="1138000" />
+      <workItem from="1641308832041" duration="247000" />
+      <workItem from="1641311273396" duration="3170000" />
+      <workItem from="1641384283669" duration="1854000" />
+      <workItem from="1641407046518" duration="1324000" />
     </task>
     <servers />
   </component>
@@ -274,7 +301,9 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Kapos_Workshop$magyarnehezseg.coverage" NAME="magyarnehezseg Coverage Results" MODIFIED="1641407999283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/szolista" />
     <SUITE FILE_PATH="coverage/Kapos_Workshop$databaseInstert.coverage" NAME="databaseInstert Coverage Results" MODIFIED="1641236705968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$nehezseg.coverage" NAME="nehezseg Coverage Results" MODIFIED="1641292148873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/szolista" />
+    <SUITE FILE_PATH="coverage/Kapos_Workshop$nehezseg.coverage" NAME="nehezseg Coverage Results" MODIFIED="1641408051884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/szolista" />
+    <SUITE FILE_PATH="coverage/Kapos_Workshop$szo.coverage" NAME="szo Coverage Results" MODIFIED="1641309033991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
