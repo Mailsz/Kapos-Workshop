@@ -3,7 +3,13 @@
   if (isset($_POST['betu'])) {
     $betu = $_POST['betu'];
     if (str_contains($_SESSION['spSzo'],$betu)) {
-      echo "1";
+      $betuk = str_split($_SESSION['spSzo']);
+      echo '1|';
+      for ($i=0; $i < strlen($_SESSION['spSzo']); $i++) {
+        if ($betuk[$i]==$betu) {
+          echo $i.'_';
+        }
+      }
     }
     else {
       echo "0";
