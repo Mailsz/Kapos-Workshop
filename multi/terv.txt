@@ -4,3 +4,9 @@ https://www.youtube.com/watch?v=ppcBIHv_ZPs&t=2623s
 https://www.youtube.com/watch?v=9GZBoszwLbo
 
 npm install --save express socket.io
+npm install --save express socket.io-client
+
+nodemon server
+
+tutorial alap:
+https://www.youtube.com/watch?v=vQjiN8Qgs3c&list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9

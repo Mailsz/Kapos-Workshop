@@ -12,6 +12,10 @@ app.use(express.static('frontend'));
 // socket setup
 var io = socket(server);
 
-io.on('connection', function (){
+io.on('connection', function (socket){
     console.log("sikeres socket csatlakozas", socket.id)
+
+    socket.on('message', function (data){
+        io.socket.emit('message', data);
+    });
 });
