@@ -23,11 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Kapos-Workshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kapos-Workshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022__01__04__10_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022__01__04__10_39__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szo.py" beforeDir="false" afterPath="$PROJECT_DIR$/szo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/szolista/nehezseg.py" beforeDir="false" afterPath="$PROJECT_DIR$/szolista/nehezseg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.esm.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.esm.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/broadcast-operator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/broadcast-operator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/namespace.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/namespace.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/socket.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/socket.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +56,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="HTTP Request" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,16 +97,18 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Kapos-Workshop\multi\frontend" />
       <recent name="C:\xampp\htdocs\Kapos-Workshop\szolista" />
       <recent name="C:\Users\gamen\Desktop\info\Kapos-Workshop\Dokumentumok" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.nehezseg">
+  <component name="RunManager" selected="Node.js.server.js">
     <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/multi/server.js" working-dir="$PROJECT_DIR$/multi">
       <method v="2" />
     </configuration>
@@ -226,17 +245,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.pewds" />
-      <item itemvalue="Python.nehezseg" />
-      <item itemvalue="Python.szo" />
-      <item itemvalue="Python.magyarnehezseg" />
+      <item itemvalue="Node.js.server.js" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.nehezseg" />
-        <item itemvalue="Python.magyarnehezseg" />
-        <item itemvalue="Python.szo" />
+        <item itemvalue="Node.js.server.js" />
       </list>
     </recent_temporary>
   </component>
@@ -283,6 +296,7 @@
       <workItem from="1641311273396" duration="3170000" />
       <workItem from="1641384283669" duration="1854000" />
       <workItem from="1641407046518" duration="1324000" />
+      <workItem from="1641461835889" duration="3161000" />
     </task>
     <servers />
   </component>
@@ -299,11 +313,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$magyarnehezseg.coverage" NAME="magyarnehezseg Coverage Results" MODIFIED="1641407999283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/szolista" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$databaseInstert.coverage" NAME="databaseInstert Coverage Results" MODIFIED="1641236705968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$nehezseg.coverage" NAME="nehezseg Coverage Results" MODIFIED="1641408051884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/szolista" />
-    <SUITE FILE_PATH="coverage/Kapos_Workshop$szo.coverage" NAME="szo Coverage Results" MODIFIED="1641309033991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
