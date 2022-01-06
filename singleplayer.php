@@ -13,66 +13,24 @@
         <?php
           include_once 'db.php';
           $randId = rand(1,58);
-          $sql = "SELECT szo FROM szavak WHERE id='$randId' AND nyelv='magyar'";
-          $r = mysqli_query($connect,$sql);
+          $sql = "SELECT szo FROM szavak WHERE id='$randId' AND nyelv='angol'";
           mysqli_query($connect,"SET NAMES 'utf8'");
+          $r = mysqli_query($connect,$sql);
           $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
           $_SESSION['spHiba'] = 0;
+          $_SESSION['spKitalaltBetuk'] = "";
+          for ($i=0; $i < strlen($_SESSION['spSzo']); $i++) {
+            $_SESSION['spKitalaltBetuk']=$_SESSION['spKitalaltBetuk'].'_';
+          }
           echo $_SESSION['spSzo'];
          ?>
 
-         <script type="text/javascript">
-         /*
-        function button(id) {
-            if (szo != "") {
-                betu = document.getElementById(id).textContent.toLowerCase();
-                vonal_lista = $('p#szo').text().split("");
-                betu_lista = szo.split("");
-
-                if (szo.includes(betu)) {
-                    for (var i = 0; i < szo.length; i++) {
-                        if (betu_lista[i] == betu) {
-                            vonal_lista[i] = betu;
-                        }
-                    }
-                    document.getElementById(id).style.backgroundColor = "green";
-                    document.getElementById(id).disabled = true;
-                    $('p#szo').text(vonal_lista.join(""));
-                    console.log($('p#szo').text())
-                    console.log(szo)
-                    console.log($('p#szo').text() === szo);
-
-                    if (($('p#szo').text().includes("_") == false)) {
-                        alert("Nyertél!");
-                        location.reload();
-                    }
-                } else {
-                    document.getElementById(id).style.backgroundColor = "red";
-                    document.getElementById(id).disabled = true;
-                    hibak = hibak + 1
-                    $('p#hibak').text("Hibák száma: " + hibak);
-                    document.getElementById("kep").src = "kepek/" + hibak + ".png";
-                    if (hibak > 6) {
-                        alert("Vesztettél, a szó a(z) " + szo + " volt!");
-                        location.reload();
-                    }
-                }
-            } else {
-                alert("Nyomj a Kezdés gombra a játék kezdéséhez!")
-            }
-        }
-
-        window.onbeforeunload = function (event) {
-            return confirm("Confirm refresh");
-        };*/
-    </script>
+         <script type="text/javascript"></script>
 </head>
 <body>
 <section id="szo_sec">
     <p id="szo"><?php
-        for($i=0;$i<strlen($_SESSION['spSzo'])-1;$i++) {
-          echo '_';
-        }
+        echo $_SESSION['spKitalaltBetuk'];
      ?></p>
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
@@ -85,7 +43,7 @@
 <section id="betu_sec">
     <!-- Betű gombok  -->
     <div class="betu_div">
-        <button id="a" class="betu" onclick="button(this.id)">A</button>
+        <button id="a" class="betu" accesskey="a" onclick="button(this.id)">A</button>
         <button id="á" class="betu" onclick="button(this.id)">Á</button>
         <button id="b" class="betu" onclick="button(this.id)">B</button>
         <button id="c" class="betu" onclick="button(this.id)">C</button>
@@ -121,6 +79,14 @@
         <button id="y" class="betu" onclick="button(this.id)">Y</button>
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
     </div>
+
+    <script type="text/javascript">
+      $(function() {
+        $('body').keypress(function(e) {
+            button(e.key)
+        });
+      });
+    </script>
 </section>
 <?php include_once 'js/betuSP.php' ?>
 </body>

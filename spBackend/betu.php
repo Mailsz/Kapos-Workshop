@@ -4,19 +4,18 @@
     $betu = $_POST['betu'];
     if (str_contains($_SESSION['spSzo'],$betu)) {
       $betuk = str_split($_SESSION['spSzo']);
-      echo '1|';
+      $kitalalt = str_split($_SESSION['spKitalaltBetuk']);
       for ($i=0; $i < strlen($_SESSION['spSzo']); $i++) {
         if ($betuk[$i]==$betu) {
-          echo $i.'_';
+          $kitalalt[$i] = $betu;
         }
       }
+      $_SESSION['spKitalaltBetuk'] = implode($kitalalt);
+      echo implode($kitalalt);
     }
     else {
-      echo "0";
-      $aktHibaSzam = $_SESSION['spHiba'];
-      $aktHibaSzam+=1;
-      $_SESSION['spHiba']=$aktHibaSzam;
-      echo "|".$_SESSION['spHiba'];
+      $_SESSION['spHiba']+=1;
+      echo $_SESSION['spHiba'];
     }
   }
  ?>
