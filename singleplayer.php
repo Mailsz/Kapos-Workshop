@@ -16,9 +16,11 @@
           $sql = "SELECT szo FROM szavak WHERE id='$randId' AND nyelv='angol'";
           mysqli_query($connect,"SET NAMES 'utf8'");
           $r = mysqli_query($connect,$sql);
+
           $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
           $_SESSION['spHiba'] = 0;
           $_SESSION['spKitalaltBetuk'] = "";
+          $_SESSION['spTippeltBetuk']=[];
           for ($i=0; $i < strlen($_SESSION['spSzo']); $i++) {
             $_SESSION['spKitalaltBetuk']=$_SESSION['spKitalaltBetuk'].'_';
           }
@@ -41,7 +43,7 @@
 <section id="betu_sec">
     <!-- Betű gombok  -->
     <div class="betu_div">
-        <button id="a" class="betu" accesskey="a" onclick="button(this.id)">A</button>
+        <button id="a" class="betu" onclick="button(this.id)">A</button>
         <button id="á" class="betu" onclick="button(this.id)">Á</button>
         <button id="b" class="betu" onclick="button(this.id)">B</button>
         <button id="c" class="betu" onclick="button(this.id)">C</button>
@@ -81,7 +83,7 @@
     <script type="text/javascript">
       $(function() {
         $('body').keypress(function(e) {
-          button(e.key)
+            button(e.key)
         });
       });
     </script>
