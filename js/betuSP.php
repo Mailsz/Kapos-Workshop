@@ -1,10 +1,6 @@
 <?php
   echo '
     <script>
-    szo = "'.$_SESSION['spSzo'].'";
-    for (var i = 0; i < szo.length; i++) {
-        $(\'#szo\').append("_");
-    }
 
     function button(id) {
       var betu = document.getElementById(id).textContent.toLowerCase()
@@ -13,7 +9,6 @@
       xhr.open(\'POST\',\'spBackend/betu.php\',true);
       xhr.setRequestHeader(\'Content-type\',\'application/x-www-form-urlencoded\');
       xhr.onload = function() {
-        console.log(this.responseText)
         if (this.responseText.split("|")[0]==0) {
           $("button#"+betu).css("backgroundColor","red")
           var hibak = this.responseText.split("|")[1]
@@ -21,7 +16,15 @@
           $("#kep").attr("src", "kepek/"+hibak+".png")
         }
         else {
+          var betuk = this.responseText.split("|")[1].split("_")
+          vonalak=$("#szo").text().split("")
+          for(i=0; i<betuk.length-1;i++) {
+            vonalak[betuk[i]]=betu
+          }
+          $("#szo").html(vonalak)
+          console.log(vonalak)
           $("button#"+betu).css("backgroundColor","green")
+
         }
       }
       xhr.send("betu="+betu);

@@ -13,9 +13,9 @@
         <?php
           include_once 'db.php';
           $randId = rand(1,58);
-          $sql = "SELECT szo FROM szavak WHERE id='$randId'";
-          mysqli_query($connect,"SET NAMES 'utf8'");
+          $sql = "SELECT szo FROM szavak WHERE id='$randId' AND nyelv='magyar'";
           $r = mysqli_query($connect,$sql);
+          mysqli_query($connect,"SET NAMES 'utf8'");
           $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
           $_SESSION['spHiba'] = 0;
           echo $_SESSION['spSzo'];
@@ -69,7 +69,11 @@
 </head>
 <body>
 <section id="szo_sec">
-    <p id="szo"></p>
+    <p id="szo"><?php
+        for($i=0;$i<strlen($_SESSION['spSzo'])-1;$i++) {
+          echo '_';
+        }
+     ?></p>
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
 <section id="kep_sec">
