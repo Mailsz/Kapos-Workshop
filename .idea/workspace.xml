@@ -23,27 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022__01__04__10_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022__01__04__10_39__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.esm.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.esm.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/broadcast-operator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/broadcast-operator.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/namespace.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/namespace.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/parent-namespace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/socket.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/dist/socket.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/node_modules/socket.io/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/node_modules/socket.io/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/multi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/frontend/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/frontend/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/multi/frontend/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multi/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi/terv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/multi/terv.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +281,8 @@
       <workItem from="1641311273396" duration="3170000" />
       <workItem from="1641384283669" duration="1854000" />
       <workItem from="1641407046518" duration="1324000" />
-      <workItem from="1641461835889" duration="3161000" />
+      <workItem from="1641461835889" duration="3263000" />
+      <workItem from="1641469841536" duration="2626000" />
     </task>
     <servers />
   </component>
