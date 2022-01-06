@@ -24,8 +24,6 @@
           }
           echo $_SESSION['spSzo'];
          ?>
-
-         <script type="text/javascript"></script>
 </head>
 <body>
 <section id="szo_sec">
@@ -83,7 +81,7 @@
     <script type="text/javascript">
       $(function() {
         $('body').keypress(function(e) {
-            button(e.key)
+          button(e.key)
         });
       });
     </script>
