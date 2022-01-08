@@ -28,10 +28,18 @@
          ?>
 </head>
 <body>
+<<<<<<< Updated upstream
 <section id="szo_sec">
     <p id="szo"><?php
         echo $_SESSION['spKitalaltBetuk'];
      ?></p>
+=======
+  <div class="jatek_felulet" style="display:none">
+  <section id="szo_sec">
+      <p id="szo"></p>
+      <p id="countdown"></p>
+  </section>
+>>>>>>> Stashed changes
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
 <section id="kep_sec">
@@ -79,6 +87,7 @@
         <button id="y" class="betu" onclick="button(this.id)">Y</button>
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
     </div>
+<<<<<<< Updated upstream
 
     <script type="text/javascript">
       $(function() {
@@ -87,6 +96,9 @@
         });
       });
     </script>
+=======
+    </div>
+>>>>>>> Stashed changes
 </section>
 <?php include_once 'js/betuSP.php' ?>
 </body>
