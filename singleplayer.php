@@ -6,14 +6,16 @@
     <title>Hang Out!</title>
     <!-- CSS link  -->
     <link rel="stylesheet" href="css/main.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- JavaScript és JQuery link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
         <?php
           include_once 'db.php';
-          $randId = rand(1,58);
-          $sql = "SELECT szo FROM szavak WHERE id='$randId' AND nyelv='angol'";
+          $difficulty=$_POST['difficulty'];
+          $language = $_POST['language'];
+          $sql = "SELECT szo FROM szavak WHERE nyelv='$language' AND nehezseg = '$difficulty' ORDER BY RAND() LIMIT 1 ";
           mysqli_query($connect,"SET NAMES 'utf8'");
           $r = mysqli_query($connect,$sql);
 
@@ -21,10 +23,10 @@
           $_SESSION['spHiba'] = 0;
           $_SESSION['spKitalaltBetuk'] = "";
           $_SESSION['spTippeltBetuk']=[];
-          for ($i=0; $i < strlen($_SESSION['spSzo']); $i++) {
+          for ($i=0; $i < mb_strlen($_SESSION['spSzo'],'UTF-8'); $i++) {
             $_SESSION['spKitalaltBetuk']=$_SESSION['spKitalaltBetuk'].'_';
           }
-          echo $_SESSION['spSzo'];
+          //echo $_SESSION['spSzo'];
          ?>
 </head>
 <body>
@@ -42,7 +44,10 @@
 
 <section id="betu_sec">
     <!-- Betű gombok  -->
-    <div class="betu_div">
+    <?php
+      if ($language == 'magyar') {
+        echo '
+        <div class="betu_div">
         <button id="a" class="betu" onclick="button(this.id)">A</button>
         <button id="á" class="betu" onclick="button(this.id)">Á</button>
         <button id="b" class="betu" onclick="button(this.id)">B</button>
@@ -78,7 +83,42 @@
         <button id="x" class="betu" onclick="button(this.id)">X</button>
         <button id="y" class="betu" onclick="button(this.id)">Y</button>
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
-    </div>
+        </div>
+        ';
+      }
+      else {
+        echo '
+        <div class="betu_div">
+        <button id="a" class="betu" onclick="button(this.id)">A</button>
+        <button id="b" class="betu" onclick="button(this.id)">B</button>
+        <button id="c" class="betu" onclick="button(this.id)">C</button>
+        <button id="d" class="betu" onclick="button(this.id)">D</button>
+        <button id="e" class="betu" onclick="button(this.id)">E</button>
+        <button id="f" class="betu" onclick="button(this.id)">F</button>
+        <button id="g" class="betu" onclick="button(this.id)">G</button>
+        <button id="h" class="betu" onclick="button(this.id)">H</button>
+        <button id="i" class="betu" onclick="button(this.id)">I</button>
+        <button id="j" class="betu" onclick="button(this.id)">J</button>
+        <button id="k" class="betu" onclick="button(this.id)">K</button>
+        <button id="l" class="betu" onclick="button(this.id)">L</button>
+        <button id="m" class="betu" onclick="button(this.id)">M</button>
+        <button id="n" class="betu" onclick="button(this.id)">N</button>
+        <button id="o" class="betu" onclick="button(this.id)">O</button>
+        <button id="p" class="betu" onclick="button(this.id)">P</button>
+        <button id="q" class="betu" onclick="button(this.id)">Q</button>
+        <button id="r" class="betu" onclick="button(this.id)">R</button>
+        <button id="s" class="betu" onclick="button(this.id)">S</button>
+        <button id="t" class="betu" onclick="button(this.id)">T</button>
+        <button id="u" class="betu" onclick="button(this.id)">U</button>
+        <button id="v" class="betu" onclick="button(this.id)">V</button>
+        <button id="w" class="betu" onclick="button(this.id)">W</button>
+        <button id="x" class="betu" onclick="button(this.id)">X</button>
+        <button id="y" class="betu" onclick="button(this.id)">Y</button>
+        <button id="z" class="betu" onclick="button(this.id)">Z</button>
+        </div>
+        ';
+      }
+     ?>
 
     <script type="text/javascript">
       $(function() {

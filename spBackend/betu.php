@@ -5,15 +5,15 @@
     if (!in_array($betu, $_SESSION['spTippeltBetuk'])) {
       if (str_contains($_SESSION['spSzo'],$betu)) {
         /*Ha jó a betű*/
-        $betuk = str_split($_SESSION['spSzo']);
-        $kitalalt = str_split($_SESSION['spKitalaltBetuk']);
-        for ($i=0; $i < strlen($_SESSION['spSzo']); $i++) {
+        $betuk = mb_str_split($_SESSION['spSzo']);
+        $kitalalt = mb_str_split($_SESSION['spKitalaltBetuk']);
+        for ($i=0; $i < mb_strlen($_SESSION['spSzo'],'UTF-8'); $i++) {
           if ($betuk[$i]==$betu) {
             $kitalalt[$i] = $betu;
           }
         }
         $_SESSION['spKitalaltBetuk'] = implode($kitalalt);
-        echo implode($kitalalt);
+        echo $_SESSION['spKitalaltBetuk'];
       }
       else {
         /*Hiba sám hozzáadása*/

@@ -11,9 +11,12 @@
         console.log(this)
         if(this.responseText>0) {
           $("#hibak").html("Hibak száma: "+this.responseText)
+          $("#"+betu).css("background-color", "red")
+          $("#kep").attr("src", "kepek/" + this.responseText + ".png")
         }
         else if(this.responseText!="") {
           $("#szo").html(this.responseText)
+          $("#"+betu).css("background-color", "green")
         }
       }
       xhr.send("betu="+betu);

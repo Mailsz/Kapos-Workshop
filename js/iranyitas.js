@@ -1,6 +1,6 @@
 $("button[name=egyjatekos]").click(function() {
   setTimeout(function() {
-    window.location.href = "singleplayer.php"
+    window.location.href = "spStart.php"
 }, 100);
 })
 
