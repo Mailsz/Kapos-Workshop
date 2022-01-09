@@ -24,11 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="999a3773-d95f-4fa6-b02b-3f411352cae3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/client.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/frontend/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/frontend/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/multi/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/multi/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi/terv.txt" beforeDir="false" afterPath="$PROJECT_DIR$/multi/terv.txt" afterDir="false" />
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/spBackend/betu.php" beforeDir="false" afterPath="$PROJECT_DIR$/spBackend/betu.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Dokumentumok/szavak2.sql" beforeDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,9 +280,15 @@
       <workItem from="1641308832041" duration="247000" />
       <workItem from="1641311273396" duration="3170000" />
       <workItem from="1641384283669" duration="1854000" />
+<<<<<<< Updated upstream
       <workItem from="1641407046518" duration="1324000" />
       <workItem from="1641461835889" duration="3263000" />
-      <workItem from="1641469841536" duration="2626000" />
+      <workItem from="1641469841536" duration="3098000" />
+      <workItem from="1641590973696" duration="1004000" />
+=======
+      <workItem from="1641407046518" duration="1800000" />
+      <workItem from="1641462844362" duration="181000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

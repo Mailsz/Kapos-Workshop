@@ -9,8 +9,6 @@ h1{
 }
 
 button:hover{
-  width: 65vh;
-  height: 7vw;
   cursor: pointer;
   background-color: #5C7AEA;
   opacity: 1;
@@ -20,6 +18,11 @@ button:hover{
   font-family: 'Rubik', sans-serif;
   font-family: 'Outfit', sans-serif;
 
+}
+
+.felhasznalobeallitasok{
+  position: relative;
+  left: 32px;
 }
 
 body{

@@ -30,10 +30,12 @@
          ?>
 </head>
 <body>
+
 <section id="szo_sec">
     <p id="szo"><?php
         echo $_SESSION['spKitalaltBetuk'];
      ?></p>
+
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
 <section id="kep_sec">
@@ -127,6 +129,9 @@
         });
       });
     </script>
+
+    </div>
+
 </section>
 <?php include_once 'js/betuSP.php' ?>
 </body>

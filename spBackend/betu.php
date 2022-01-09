@@ -1,8 +1,9 @@
 <?php
-  session_start();
-  if (isset($_POST['betu'])) {
+session_start();
+if (isset($_POST['betu'])) {
     $betu = $_POST['betu'];
     if (!in_array($betu, $_SESSION['spTippeltBetuk'])) {
+
       if (str_contains($_SESSION['spSzo'],$betu)) {
         /*Ha jó a betű*/
         $betuk = mb_str_split($_SESSION['spSzo']);
@@ -21,6 +22,7 @@
         echo $_SESSION['spHiba'];
       }
       array_push($_SESSION["spTippeltBetuk"],$betu);
+
     }
-  }
- ?>
+}
+?>

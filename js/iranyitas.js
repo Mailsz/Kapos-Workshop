@@ -18,6 +18,6 @@ $("button[name=regisztralas]").click(function() {
 
 $("button[name=beallitasok]").click(function() {
   setTimeout(function() {
-    window.location.href = "beallitasok.html"
+    window.location.href = "beallitasok.php"
 }, 100);
 })
