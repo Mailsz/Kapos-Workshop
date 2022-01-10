@@ -14,6 +14,7 @@
         <?php
           include_once 'db.php';
           $difficulty=$_POST['difficulty'];
+          $_SESSION['ido']=60;
           $language = $_POST['language'];
           $sql = "SELECT szo FROM szavak WHERE nyelv='$language' AND nehezseg = '$difficulty' ORDER BY RAND() LIMIT 1 ";
           mysqli_query($connect,"SET NAMES 'utf8'");
@@ -32,6 +33,7 @@
 <body>
 
 <section id="szo_sec">
+  <p id="countdown"></p>
     <p id="szo"><?php
         echo $_SESSION['spKitalaltBetuk'];
      ?></p>
@@ -128,7 +130,19 @@
             button(e.key)
         });
       });
+
+      setInterval(function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST','spBackend/countdown.php',true);
+        xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+        xhr.onload = function() {
+        $("#countdown").html(this.responseText);
+        }
+        xhr.send();
+      },1000)
     </script>
+
+
 
     </div>
 
