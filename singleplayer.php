@@ -136,7 +136,7 @@
         xhr.open('POST','spBackend/countdown.php',true);
         xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
         xhr.onload = function() {
-        $("#countdown").html(this.responseText);
+          $("#countdown").html(this.responseText);
         }
         xhr.send();
       },1000)
@@ -147,6 +147,29 @@
     </div>
 
 </section>
-<?php include_once 'js/betuSP.php' ?>
+<script>
+function button(id) {
+  var betu = document.getElementById(id).innerHTML.toLowerCase()
+  $("button#"+id).prop('disabled', true);
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST','spBackend/betu.php',true);
+  xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    if(this.responseText>0) {
+      $("#hibak").html("Hibak száma: "+this.responseText)
+      $("#"+betu).css("background-color", "red")
+      $("#kep").attr("src", "kepek/" + this.responseText + ".png")
+    }
+    else if(this.responseText!="") {
+      if (!this.responseText.includes('_')) {
+        $(".betu_div").html('<button id="a" class="betu" onclick="button(this.id)">A</button>')
+      }
+      $("#szo").html(this.responseText)
+      $("#"+betu).css("background-color", "green")
+    }
+  }
+  xhr.send("betu="+betu);
+}
+</script>
 </body>
 </html>
