@@ -1,21 +1,29 @@
-var express = require('express');
+// SOCKET.IO NAK AZ IMPORTALASA (sry caps)
 var socket = require('socket.io');
 
+//szerver oldali alkalmazasok felallitasa
+const express = require("express")
 var app = express();
-var server = app.listen(4000, function (){
-    console.log("listening on port 4000")
+var server = app.listen(4000);
+var io = require('socket.io')(server, {
+    cors: {
+      origin: '*',
+    }
 });
 
-app.use(express.static('frontend'));
+// Static files
+app.use(express.static('public'));
 
+//Ha uj kapcsolat jon letre
 
-// socket setup
-var io = socket(server);
+io.on('connection', (socket) => {
+    //Kiirja a csatlakozott fel id-jet
+    console.log(socket.id, 'csatlakozott');
 
-io.on('connection', function (socket){
-    console.log("sikeres socket csatlakozas", socket.id)
-
-    socket.on('message', function (data){
-        io.socket.emit('message', data);
+    //Adat kuldes kezelese
+    socket.on('chat', function(data){
+        console.log(data);
+        io.sockets.emit('chat', data);
     });
+
 });
