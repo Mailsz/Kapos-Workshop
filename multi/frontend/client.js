@@ -1,18 +1,23 @@
-// csatlakozas letrehozasa socket.io hoz
-var socket = io.connect("http://localhost:4000");
+//Csatlakozas letrehozasa
+var socket = io.connect('http://localhost:4000');
 
-var output = document.getElementById("output");
-var button = document.getElementById("send");
-var message = document.getElementById("message");
+//Ertekek a html reszrol
+var message = document.getElementById('message'),
+      btn = document.getElementById('send'),
+      output = document.getElementById('output');
 
-button.addEventListener('click', function () {
-    socket.emit('message', {
-        message: message.value
-    });
+//kuldes gombra reagalva
+btn.addEventListener('click', function(){
+  //kuldje ez az uzenetet
+  socket.emit('chat', {
+      message: message.value
+  });
+  //uritse ki az inut tartalmat
+  message.value = "";
 });
 
-
-socket.on('message', function (data) {
-    io.socket.emit('message', data);
-    output.innerHTML += '<p><strong>' + data.handle + '</strong>>' + data.message + '</p>';
+//Ha kap uzenetet akkor...
+socket.on('chat', function(data){
+    //A frontendre kiirashoz szukseges a resz
+    output.innerHTML += '<p><strong>' + data.message + ': </strong></p>';
 });
