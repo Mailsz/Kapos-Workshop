@@ -1,7 +1,7 @@
 import string
 import MySQLdb
 
-file=open("Angol.txt", "r", encoding="utf-8")
+file=open("1499szo.txt", "r", encoding="utf-8")
 #szavak beolvasása
 szavak=[]
 for i in file:
@@ -44,7 +44,7 @@ mydb = MySQLdb.connect(
     host="localhost",
     user="root",
     password="",
-    database="szavak"
+    database="akasztofa"
 )
 
 j=0
