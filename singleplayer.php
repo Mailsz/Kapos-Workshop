@@ -181,8 +181,15 @@ function button(id) {
       $("#hibak").html("Hibák száma: "+received.mistakes)
       var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
       var kitaltSzavakOutPut = ""
+      if (received.correct==1) {
+        $('#'+betu).css("background-color", "green")
+      }
+      else {
+        $('#'+betu).css("background-color", "red")
+      }
       if (kitalaltSzavakDb < kitaltSzavak.length) {
         $('button').prop('disabled', false);
+        $('button').css("background-color",'')
       }
       kitalaltSzavakDb = kitaltSzavak.length
       for (var i = 0; i < kitaltSzavak.length; i++) {

@@ -64,7 +64,7 @@ if (isset($_POST['betu'])) {
           $spKitalaltSzavak=$_SESSION['kitalaltSzavak'];
           $spKitalaltBetuk=$_SESSION['spKitalaltBetuk'];
           $spHibak=$_SESSION['spHiba'];
-          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak));
+          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak),"correct"=>1);
           echo json_encode($visszakuld);
         }
         else {
@@ -85,7 +85,7 @@ if (isset($_POST['betu'])) {
           $spKitalaltSzavak=$_SESSION['kitalaltSzavak'];
           $spKitalaltBetuk=$_SESSION['spKitalaltBetuk'];
           $spHibak=$_SESSION['spHiba'];
-          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak));
+          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak),"correct"=>0);
           echo json_encode($visszakuld);
         }
 
