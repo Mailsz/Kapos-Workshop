@@ -14,16 +14,24 @@
         <?php
           include_once 'db.php';
           $difficulty=$_POST['difficulty'];
+          $_SESSION['difficulty']=$difficulty;
+
           $_SESSION['ido']=60;
+
           $language = $_POST['language'];
+          $_SESSION['language']=$language;
           $sql = "SELECT szo FROM szavak WHERE nyelv='$language' AND nehezseg = '$difficulty' ORDER BY RAND() LIMIT 1 ";
           mysqli_query($connect,"SET NAMES 'utf8'");
           $r = mysqli_query($connect,$sql);
 
           $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
-          $_SESSION['spHiba'] = 0;
           $_SESSION['spKitalaltBetuk'] = "";
           $_SESSION['spTippeltBetuk']=[];
+
+          $_SESSION['spHiba'] = 0;
+
+          $_SESSION['kitalaltSzavak'] = [];
+
           for ($i=0; $i < mb_strlen($_SESSION['spSzo'],'UTF-8'); $i++) {
             $_SESSION['spKitalaltBetuk']=$_SESSION['spKitalaltBetuk'].'_';
           }
@@ -44,6 +52,11 @@
     <hr class="hrtop">
     <img src="kepek/0.png" id="kep">
     <p id="hibak">Hibák száma: 0</p>
+
+    <h1>Kitalált szavak:</h1>
+    <ul id="guessedWords">
+
+    </ul>
 </section>
 
 <section id="betu_sec">
@@ -127,7 +140,7 @@
     <script type="text/javascript">
       $(function() {
         $('body').keypress(function(e) {
-            button(e.key)
+            button(e.key.toLowerCase())
         });
       });
 
@@ -155,18 +168,30 @@ function button(id) {
   xhr.open('POST','spBackend/betu.php',true);
   xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
   xhr.onload = function() {
-    if(this.responseText>0) {
+    console.log(this.responseText)
+    if (this.responseText!="") {
+      var received = JSON.parse(this.responseText)
+      $("#szo").html(received.spKitalaltBetuk)
+      $("#hibak").html("Hibák száma: "+received.mistakes)
+      var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
+      var kitaltSzavakOutPut = ""
+      for (var i = 0; i < kitaltSzavak.length; i++) {
+        kitaltSzavakOutPut+="<li>"+kitaltSzavak[i]+"</li>"
+      }
+      $("#guessedWords").html(kitaltSzavakOutPut)
+    }
+    /*if(this.responseText>0) {
       $("#hibak").html("Hibak száma: "+this.responseText)
       $("#"+betu).css("background-color", "red")
       $("#kep").attr("src", "kepek/" + this.responseText + ".png")
     }
     else if(this.responseText!="") {
       if (!this.responseText.includes('_')) {
-        $(".betu_div").html('<button id="a" class="betu" onclick="button(this.id)">A</button>')
+        $("button").css("background-color","");
       }
       $("#szo").html(this.responseText)
       $("#"+betu).css("background-color", "green")
-    }
+    }*/
   }
   xhr.send("betu="+betu);
 }
