@@ -16,7 +16,7 @@
           $difficulty=$_POST['difficulty'];
           $_SESSION['difficulty']=$difficulty;
 
-          $_SESSION['ido']=60;
+          $_SESSION['ido']=$_POST['time'];
 
           $language = $_POST['language'];
           $_SESSION['language']=$language;
@@ -35,7 +35,6 @@
           for ($i=0; $i < mb_strlen($_SESSION['spSzo'],'UTF-8'); $i++) {
             $_SESSION['spKitalaltBetuk']=$_SESSION['spKitalaltBetuk'].'_';
           }
-          //echo $_SESSION['spSzo'];
          ?>
 </head>
 <body>
@@ -57,6 +56,7 @@
     <ul id="guessedWords">
 
     </ul>
+    <p id="jatekUjra"></p>
 </section>
 
 <section id="betu_sec">
@@ -139,6 +139,7 @@
 
     <script type="text/javascript">
       $(function() {
+        kitalaltSzavakDb = 0
         $('body').keypress(function(e) {
             button(e.key.toLowerCase())
         });
@@ -150,6 +151,9 @@
         xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
         xhr.onload = function() {
           $("#countdown").html(this.responseText);
+          if (this.responseText<1) {
+            $("#jatekUjra").html('<button>Játék újra</button>')
+          }
         }
         xhr.send();
       },1000)
@@ -175,23 +179,15 @@ function button(id) {
       $("#hibak").html("Hibák száma: "+received.mistakes)
       var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
       var kitaltSzavakOutPut = ""
+      if (kitalaltSzavakDb < kitaltSzavak.length) {
+        $('button').prop('disabled', false);
+      }
+      kitalaltSzavakDb = kitaltSzavak.length
       for (var i = 0; i < kitaltSzavak.length; i++) {
         kitaltSzavakOutPut+="<li>"+kitaltSzavak[i]+"</li>"
       }
       $("#guessedWords").html(kitaltSzavakOutPut)
     }
-    /*if(this.responseText>0) {
-      $("#hibak").html("Hibak száma: "+this.responseText)
-      $("#"+betu).css("background-color", "red")
-      $("#kep").attr("src", "kepek/" + this.responseText + ".png")
-    }
-    else if(this.responseText!="") {
-      if (!this.responseText.includes('_')) {
-        $("button").css("background-color","");
-      }
-      $("#szo").html(this.responseText)
-      $("#"+betu).css("background-color", "green")
-    }*/
   }
   xhr.send("betu="+betu);
 }
