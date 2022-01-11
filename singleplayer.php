@@ -17,6 +17,7 @@
           $_SESSION['difficulty']=$difficulty;
 
           $_SESSION['ido']=$_POST['time'];
+          $_SESSION['e_ido']=$_POST['time'];
 
           $language = $_POST['language'];
           $_SESSION['language']=$language;
@@ -151,8 +152,9 @@
         xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
         xhr.onload = function() {
           $("#countdown").html(this.responseText);
-          if (this.responseText<1) {
-            $("#jatekUjra").html('<button>Játék újra</button>')
+          console.log(this.responseText);
+          if (parseInt(this.responseText)==1) {
+            $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
           }
         }
         xhr.send();
