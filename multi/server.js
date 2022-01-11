@@ -1,5 +1,4 @@
 var maxPlayers = 4;
-
 // SOCKET.IO NAK AZ IMPORTALASA (sry caps)
 var socket = require('socket.io');
 
@@ -18,7 +17,7 @@ app.use(express.static('public'));
 //Ha uj kapcsolat jon letre
 io.on('connection', (socket) => {
 
-  //ha a jatekosok szama tobb mint a megengedett maximum utasitsa vissza a csatlakozast
+  //Ha a jatekosok szama tobb mint a megengedett maximum utasitsa vissza a csatlakozast
   if(io.engine.clientsCount > maxPlayers) {
     socket.disconnect();
   }
@@ -27,7 +26,9 @@ io.on('connection', (socket) => {
     io.sockets.emit ('users', {count: io.engine.clientsCount});
   }
 
-    //Kiirja a csatlakozott fel id-jet
+    const sessionID = socket.id;
+
+    //Kiirja a csatlakozott fel id-jet es a csatlakozott clientek szamat
     console.log(socket.id, 'csatlakozott');
     console.log(io.engine.clientsCount);
 
