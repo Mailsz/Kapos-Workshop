@@ -56,6 +56,7 @@
     <ul id="guessedWords">
 
     </ul>
+    <p id="jatekUjra"></p>
 </section>
 
 <section id="betu_sec">
@@ -150,6 +151,9 @@
         xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
         xhr.onload = function() {
           $("#countdown").html(this.responseText);
+          if (this.responseText<1) {
+            $("#jatekUjra").html('<button>Játék újra</button>')
+          }
         }
         xhr.send();
       },1000)
