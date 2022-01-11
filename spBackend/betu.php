@@ -33,6 +33,18 @@ if (isset($_POST['betu'])) {
           if (!str_contains($_SESSION['spKitalaltBetuk'],'_')) {
             array_push($_SESSION['kitalaltSzavak'],$_SESSION['spKitalaltBetuk']);
 
+
+            /*logolni-db-ben*/
+            if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo']!='') {
+              $user = $_SESSION['felhasznalo'];
+              $language = $_SESSION['language'];
+              $difficulty = $_SESSION['difficulty'];
+              $word =   $_SESSION['spKitalaltBetuk'];
+              $sql = "INSERT INTO wordlog (user, word, difficulty, language) VALUES ('$user','$word','$difficulty','$language')";
+              mysqli_query($connect,"SET NAMES 'utf8'");
+              mysqli_query($connect,$sql);
+            }
+
             $difficulty=$_SESSION['difficulty'];
             $language = $_SESSION['language'];
 

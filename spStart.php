@@ -4,8 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Hang out!</title>
+    <link rel="stylesheet" href="css/spstart.css">
   </head>
   <body>
+    <div>
     <form class="" action="singleplayer.php" method="post">
       <label for="">Difficulty:</label>
       <select class="" name="difficulty">
@@ -20,5 +22,6 @@
       </select>
       <button type="submit" name="button">Start</button>
     </form>
+  </div>
   </body>
 </html>
