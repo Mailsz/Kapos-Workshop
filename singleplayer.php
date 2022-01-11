@@ -53,9 +53,10 @@
     <img src="kepek/0.png" id="kep">
     <p id="hibak">Hibák száma: 0</p>
 
-    <h1>Kitalált szavak:</h1>
+    <div id="kszd">
+    <h1 id="ksz">Kitalált szavak:</h1>
     <ul id="guessedWords">
-
+    </div>
     </ul>
     <p id="jatekUjra"></p>
 </section>

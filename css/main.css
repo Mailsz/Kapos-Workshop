@@ -79,3 +79,8 @@ img {
 .hrtop {
     width: 90%;
 }
+#kszd{
+  background-color: red;
+  position: absolute;
+  border: 1px solid lightblue;
+}
