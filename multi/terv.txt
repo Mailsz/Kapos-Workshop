@@ -3,12 +3,25 @@ Terv a Multiplayer Játékmód elkészítésére.
 https://www.youtube.com/watch?v=ppcBIHv_ZPs&t=2623s
 https://www.youtube.com/watch?v=9GZBoszwLbo
 
+szukseges lib-ek a server futtatasahoz:
+
+a szerverhez:
+sudo apt install nodejs npm
+sudo npm install -g nodemon
+a klienshez:
+le kell tolteni a node js-t
+https://nodejs.org/en/download/
+
 npm install --save express socket.io
 npm install --save express socket.io-client
+npm install nodemon
 
+server elinditasa
 nodemon server
 
-tutorial alap:
+source:
+https://socket.io/docs/v4/
+https://socket.io/docs/v4/handling-cors/
 https://www.youtube.com/watch?v=vQjiN8Qgs3c&list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9
 
 MOST MUKODIK UGYHOGY HOZZA NE NYULJ MERT KEZED ELTORIK!!!xd

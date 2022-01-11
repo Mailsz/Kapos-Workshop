@@ -5,6 +5,7 @@ var socket = io.connect('http://localhost:4000');
 var message = document.getElementById('message'),
       btn = document.getElementById('send'),
       output = document.getElementById('output');
+      players = document.getElementById('players');
 
 //kuldes gombra reagalva
 btn.addEventListener('click', function(){
@@ -19,5 +20,10 @@ btn.addEventListener('click', function(){
 //Ha kap uzenetet akkor...
 socket.on('chat', function(data){
     //A frontendre kiirashoz szukseges a resz
-    output.innerHTML += '<p><strong>' + data.message + ': </strong></p>';
+    output.innerHTML += '<p>' + data.message + '</p>';
+});
+
+socket.on('users', function(data){
+    console.log(data.count);
+    players.innerHTML = 'csatlakozott jatekosok (max 4): ' + data.count;
 });
