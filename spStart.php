@@ -20,6 +20,13 @@
         <option value="angol">engish</option>
         <option value="magyar">hungarian</option>
       </select>
+      <label for="">Time:</label>
+      <select class="" name="time">
+        <option value="30">30</option>
+        <option value="60">60</option>
+        <option value="90">90</option>
+        <option value="120">120</option>
+      </select>
       <button type="submit" name="button">Start</button>
     </form>
   </div>
