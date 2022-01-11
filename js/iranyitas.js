@@ -21,3 +21,9 @@ $("button[name=beallitasok]").click(function() {
     window.location.href = "beallitasok.php"
 }, 100);
 })
+
+$("button[name=tobbjatekos]").click(function() {
+  setTimeout(function() {
+    window.location.href = "multi/frontend/"
+}, 100);
+})
