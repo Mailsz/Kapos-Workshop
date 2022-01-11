@@ -20,6 +20,7 @@ server elinditasa
 nodemon server
 
 source:
+https://socket.io/docs/v4/rooms/
 https://socket.io/docs/v4/
 https://socket.io/docs/v4/handling-cors/
 https://www.youtube.com/watch?v=vQjiN8Qgs3c&list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9

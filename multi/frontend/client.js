@@ -6,14 +6,15 @@ var message = document.getElementById('message'),
       btn = document.getElementById('send'),
       output = document.getElementById('output');
       players = document.getElementById('players');
+      user = document.getElementById('user');
 
-//kuldes gombra reagalva
+//Kuldes gombra reagalva
 btn.addEventListener('click', function(){
-  //kuldje ez az uzenetet
+  //Kuldje ez az uzenetet
   socket.emit('chat', {
       message: message.value
   });
-  //uritse ki az inut tartalmat
+  //Uritse ki az input tartalmat
   message.value = "";
 });
 
@@ -23,7 +24,10 @@ socket.on('chat', function(data){
     output.innerHTML += '<p>' + data.message + '</p>';
 });
 
+//Csatlakozott jatekosok szamat fogado fuggveny
 socket.on('users', function(data){
     console.log(data.count);
+    //Kiirja a csatlakozott jatekosok szamat
     players.innerHTML = 'csatlakozott jatekosok (max 4): ' + data.count;
+    user.innerHTML = 'Felhasznalo: ' + socket.id;
 });
