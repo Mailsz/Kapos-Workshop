@@ -16,6 +16,7 @@ app.use(express.static('public'));
 
 //Ha uj kapcsolat jon letre
 io.on('connection', (socket) => {
+  socket.join("room1");
 
   //Ha a jatekosok szama tobb mint a megengedett maximum utasitsa vissza a csatlakozast
   if(io.engine.clientsCount > maxPlayers) {
