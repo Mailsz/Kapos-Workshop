@@ -12,11 +12,25 @@ var io = require('socket.io')(server, {
     }
 });
 
+let users = [];
+
 app.use(express.static('public'));
 
 //Ha uj kapcsolat jon letre
 io.on('connection', (socket) => {
-  socket.join("room1");
+
+  socket.on("join server", (username) => {
+    const user = {
+      username,
+      id: socket.id,
+    };
+    users.push(user);
+    io.emit("new user", users);
+  });
+
+  socket.on("join room", (roomName, cb) => {
+    socket.join(roomName);
+  })
 
   //Ha a jatekosok szama tobb mint a megengedett maximum utasitsa vissza a csatlakozast
   if(io.engine.clientsCount > maxPlayers) {
@@ -30,12 +44,11 @@ io.on('connection', (socket) => {
     const sessionID = socket.id;
 
     //Kiirja a csatlakozott fel id-jet es a csatlakozott clientek szamat
-    console.log(socket.id, 'csatlakozott');
-    console.log(io.engine.clientsCount);
+    console.log(socket.id, 'csatlakozott. jatekosok szama: ', io.engine.clientsCount);
+    console.log();
 
     //Adat kuldes kezelese
     socket.on('chat', function(data){
-        console.log(data);
         io.sockets.emit('chat', data);
         io.send(io.engine.clientsCount);
     });
