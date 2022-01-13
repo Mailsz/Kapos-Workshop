@@ -177,6 +177,7 @@ function button(id) {
   xhr.onload = function() {
     console.log(this.responseText)
     if (this.responseText!="") {
+      console.log(this.responseText);
       var received = JSON.parse(this.responseText)
       $("#szo").html(received.spKitalaltBetuk)
       $("#hibak").html("Hibák száma: "+received.mistakes)

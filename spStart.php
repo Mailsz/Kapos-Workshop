@@ -20,7 +20,7 @@
         <option value="angol">engish</option>
         <option value="magyar">hungarian</option>
       </select>
-<<<<<<< Updated upstream
+
       <label for="">Time:</label>
       <select class="" name="time">
         <option value="30">30</option>
@@ -29,9 +29,7 @@
         <option value="120">120</option>
       </select>
       <button type="submit" name="button">Start</button>
-=======
       <button type="submit" name="button" id="start">Start</button>
->>>>>>> Stashed changes
     </form>
   </div>
   </body>
