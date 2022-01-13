@@ -17,6 +17,7 @@
           $_SESSION['difficulty']=$difficulty;
 
           $_SESSION['ido']=$_POST['time'];
+          $_SESSION['e_ido']=$_POST['time'];
 
           $language = $_POST['language'];
           $_SESSION['language']=$language;
@@ -52,9 +53,10 @@
     <img src="kepek/0.png" id="kep">
     <p id="hibak">Hibák száma: 0</p>
 
-    <h1>Kitalált szavak:</h1>
+    <div id="kszd">
+    <h1 id="ksz">Kitalált szavak:</h1>
     <ul id="guessedWords">
-
+    </div>
     </ul>
     <p id="jatekUjra"></p>
 </section>
@@ -151,8 +153,9 @@
         xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
         xhr.onload = function() {
           $("#countdown").html(this.responseText);
-          if (this.responseText<1) {
-            $("#jatekUjra").html('<button>Játék újra</button>')
+          console.log(this.responseText);
+          if (parseInt(this.responseText)==1) {
+            $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
           }
         }
         xhr.send();
@@ -179,8 +182,15 @@ function button(id) {
       $("#hibak").html("Hibák száma: "+received.mistakes)
       var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
       var kitaltSzavakOutPut = ""
+      if (received.correct==1) {
+        $('#'+betu).css("background-color", "green")
+      }
+      else {
+        $('#'+betu).css("background-color", "red")
+      }
       if (kitalaltSzavakDb < kitaltSzavak.length) {
         $('button').prop('disabled', false);
+        $('button').css("background-color",'')
       }
       kitalaltSzavakDb = kitaltSzavak.length
       for (var i = 0; i < kitaltSzavak.length; i++) {

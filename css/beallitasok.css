@@ -8,6 +8,10 @@ h1{
   color: #14279B;
 }
 
+#felhCsere{
+  font-size: 24px;
+}
+
 button:hover{
   cursor: pointer;
   background-color: #5C7AEA;

@@ -2,3 +2,38 @@
  body{
    background-color: #E6E6E6;
  }
+#start{
+  margin-bottom: 1.5%;
+  background-color: #3D56B2;
+  border: 4px solid lightblue;
+  border-radius: 15px;
+  color: #E6E6E6;
+  width: 60vh;
+  height: 6vw;
+  font-size: 20px;
+  letter-spacing: 1px;
+  opacity: 0.86;
+  transition: 0.2s;
+  box-shadow: 0 10px #999;
+}
+
+#start:hover{
+  width: 65vh;
+  height: 7vw;
+  cursor: pointer;
+  background-color: #5C7AEA;
+  letter-spacing:2px;
+  opacity: 1;
+}
+#start:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.beallitas {
+  position: absolute;
+  right: 90px;
+  top:   -14px;
+  font-size: 25px;
+}

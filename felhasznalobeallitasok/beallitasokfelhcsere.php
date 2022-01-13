@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'db.php';
+include_once '../db.php';
 
 function debug_to_console($data) {
     $output = $data;
@@ -15,7 +15,6 @@ if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo']!="") {
    $salt = $_SESSION['felhasznalo'];
    $sql="UPDATE felhasznalok SET nev = '$ujfelhasznalo' WHERE salt = '$salt'";
    mysqli_query($connect, $sql);
-
-   echo "<script>window.location.href='beallitasok.php'</script>";
+   echo "<script>window.location.href='../beallitasok.php'</script>";
 }
  ?>

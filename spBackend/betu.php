@@ -13,7 +13,8 @@ if (isset($_POST['betu'])) {
             $user = $_SESSION['felhasznalo'];
             $language = $_SESSION['language'];
             $difficulty = $_SESSION['difficulty'];
-            $sql = "INSERT INTO characterlog (user, letter, language, difficulty, correct) VALUES('$user','$betu','$language','$difficulty',1)";
+            $time = $_SESSION['e_ido'];
+            $sql = "INSERT INTO characterlog (user, letter, language, difficulty, e_time, correct) VALUES('$user','$betu','$language','$difficulty', '$time', 1)";
             mysqli_query($connect,"SET NAMES 'utf8'");
             mysqli_query($connect,$sql);
           }
@@ -40,7 +41,8 @@ if (isset($_POST['betu'])) {
               $language = $_SESSION['language'];
               $difficulty = $_SESSION['difficulty'];
               $word =   $_SESSION['spKitalaltBetuk'];
-              $sql = "INSERT INTO wordlog (user, word, difficulty, language) VALUES ('$user','$word','$difficulty','$language')";
+              $time = $_SESSION['e_ido'];
+              $sql = "INSERT INTO wordlog (user, word, difficulty, language, e_time) VALUES ('$user','$word','$difficulty','$language','$time')";
               mysqli_query($connect,"SET NAMES 'utf8'");
               mysqli_query($connect,$sql);
             }
@@ -62,7 +64,7 @@ if (isset($_POST['betu'])) {
           $spKitalaltSzavak=$_SESSION['kitalaltSzavak'];
           $spKitalaltBetuk=$_SESSION['spKitalaltBetuk'];
           $spHibak=$_SESSION['spHiba'];
-          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak));
+          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak),"correct"=>1);
           echo json_encode($visszakuld);
         }
         else {
@@ -71,7 +73,8 @@ if (isset($_POST['betu'])) {
             $user = $_SESSION['felhasznalo'];
             $language = $_SESSION['language'];
             $difficulty = $_SESSION['difficulty'];
-            $sql = "INSERT INTO characterlog (user, letter, language, difficulty, correct) VALUES('$user','$betu','$language','$difficulty',0)";
+            $time = $_SESSION['e_ido'];
+            $sql = "INSERT INTO characterlog (user, letter, language, difficulty, e_time, correct) VALUES('$user','$betu','$language','$difficulty','$time',0)";
             mysqli_query($connect,"SET NAMES 'utf8'");
             mysqli_query($connect,$sql);
           }
@@ -82,7 +85,7 @@ if (isset($_POST['betu'])) {
           $spKitalaltSzavak=$_SESSION['kitalaltSzavak'];
           $spKitalaltBetuk=$_SESSION['spKitalaltBetuk'];
           $spHibak=$_SESSION['spHiba'];
-          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak));
+          $visszakuld=array("mistakes"=>$spHibak,"spKitalaltBetuk"=>"$spKitalaltBetuk","spKitalaltSzavak"=>json_encode($spKitalaltSzavak),"correct"=>0);
           echo json_encode($visszakuld);
         }
 

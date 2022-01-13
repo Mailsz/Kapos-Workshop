@@ -38,31 +38,33 @@ for string in szavak2:
         ertekek[i] +=  12.6 - gyakorisag[abc.index(string[j])]
     ertekek[i]=round(ertekek[i], 3)
     i+=1
-print(ertekek)
-print(szavak)
+
 #besorolas
+if False:
+    mydb = MySQLdb.connect(
+        host="localhost",
+        user="root",
+        password="",
+        database="szavak"
+    )
 
-mydb = MySQLdb.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="szavak"
-)
-
-j=0
-for szam in ertekek:
-    mycursor = mydb.cursor()
-    if (szam < 30):
-        mycursor.execute(
-            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'konnyu')")
-        mydb.commit()
-    elif szam >= 30 and szam < 50:
-        mycursor.execute(
-            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'kozepes')")
-        mydb.commit()
-    elif szam >= 50:
-        mycursor.execute(
-            "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'nehez')")
-        mydb.commit()
-    j += 1
-print(mycursor.rowcount, "record inserted.")
+    j=0
+    for szam in ertekek:
+        mycursor = mydb.cursor()
+        if (szam < 30):
+            mycursor.execute(
+                "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'konnyu')")
+            mydb.commit()
+        elif szam >= 30 and szam < 50:
+            mycursor.execute(
+                "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'kozepes')")
+            mydb.commit()
+        elif szam >= 50:
+            mycursor.execute(
+                "INSERT INTO szavak (szo, nyelv, nehezseg) VALUES('" + szavak[j] + "', 'magyar', 'nehez')")
+            mydb.commit()
+        j += 1
+    print(mycursor.rowcount, "record inserted.")
+print(szavak)
+print(szavak2)
+print(ertekek)
