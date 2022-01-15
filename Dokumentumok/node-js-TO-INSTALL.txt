@@ -1,0 +1,6 @@
+A MULTI MAPPÁBA:
+[ npm install --save express socket.io
+npm install --save express socket.io-client
+npm install nodemon ]
+
+npm install mysql
