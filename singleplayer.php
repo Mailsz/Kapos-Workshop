@@ -6,45 +6,45 @@
     <title>Hang Out!</title>
     <!-- CSS link  -->
     <link rel="stylesheet" href="css/main.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- JavaScript és JQuery link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-        <?php
-          include_once 'db.php';
-          $difficulty=$_POST['difficulty'];
-          $_SESSION['difficulty']=$difficulty;
+    <?php
+    include_once 'db.php';
+    $difficulty = $_POST['difficulty'];
+    $_SESSION['difficulty'] = $difficulty;
 
-          $_SESSION['ido']=$_POST['time'];
-          $_SESSION['e_ido']=$_POST['time'];
+    $_SESSION['ido'] = $_POST['time'];
+    $_SESSION['e_ido'] = $_POST['time'];
 
-          $language = $_POST['language'];
-          $_SESSION['language']=$language;
-          $sql = "SELECT szo FROM szavak WHERE nyelv='$language' AND nehezseg = '$difficulty' ORDER BY RAND() LIMIT 1 ";
-          mysqli_query($connect,"SET NAMES 'utf8'");
-          $r = mysqli_query($connect,$sql);
+    $language = $_POST['language'];
+    $_SESSION['language'] = $language;
+    $sql = "SELECT szo FROM szavak WHERE nyelv='$language' AND nehezseg = '$difficulty' ORDER BY RAND() LIMIT 1 ";
+    mysqli_query($connect, "SET NAMES 'utf8'");
+    $r = mysqli_query($connect, $sql);
 
-          $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
-          $_SESSION['spKitalaltBetuk'] = "";
-          $_SESSION['spTippeltBetuk']=[];
+    $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
+    $_SESSION['spKitalaltBetuk'] = "";
+    $_SESSION['spTippeltBetuk'] = [];
 
-          $_SESSION['spHiba'] = 0;
+    $_SESSION['spHiba'] = 0;
 
-          $_SESSION['kitalaltSzavak'] = [];
+    $_SESSION['kitalaltSzavak'] = [];
 
-          for ($i=0; $i < mb_strlen($_SESSION['spSzo'],'UTF-8'); $i++) {
-            $_SESSION['spKitalaltBetuk']=$_SESSION['spKitalaltBetuk'].'_';
-          }
-         ?>
+    for ($i = 0; $i < mb_strlen($_SESSION['spSzo'], 'UTF-8'); $i++) {
+        $_SESSION['spKitalaltBetuk'] = $_SESSION['spKitalaltBetuk'] . '_';
+    }
+    ?>
 </head>
 <body>
 
 <section id="szo_sec">
-  <p id="countdown"></p>
+    <p id="countdown"></p>
     <p id="szo"><?php
         echo $_SESSION['spKitalaltBetuk'];
-     ?></p>
+        ?></p>
 
 </section>
 <!-- Akasztás folyamata képeken demonstrálva  -->
@@ -54,8 +54,8 @@
     <p id="hibak">Hibák száma: 0</p>
 
     <div id="kszd">
-    <h1 id="ksz">Kitalált szavak:</h1>
-    <ul id="guessedWords">
+        <h1 id="ksz">Kitalált szavak:</h1>
+        <ul id="guessedWords">
     </div>
     </ul>
     <p id="jatekUjra"></p>
@@ -64,7 +64,7 @@
 <section id="betu_sec">
     <!-- Betű gombok  -->
     <?php
-      if ($language == 'magyar') {
+    if ($language == 'magyar') {
         echo '
         <div class="betu_div">
         <button id="a" class="betu" onclick="button(this.id)">A</button>
@@ -104,8 +104,7 @@
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
         </div>
         ';
-      }
-      else {
+    } else {
         echo '
         <div class="betu_div">
         <button id="a" class="betu" onclick="button(this.id)">A</button>
@@ -136,71 +135,69 @@
         <button id="z" class="betu" onclick="button(this.id)">Z</button>
         </div>
         ';
-      }
-     ?>
+    }
+    ?>
 
     <script type="text/javascript">
-      $(function() {
-        kitalaltSzavakDb = 0
-        $('body').keypress(function(e) {
-            button(e.key.toLowerCase())
+        $(function () {
+            kitalaltSzavakDb = 0
+            $('body').keypress(function (e) {
+                button(e.key.toLowerCase())
+            });
         });
-      });
 
-      setInterval(function() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST','spBackend/countdown.php',true);
-        xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-        xhr.onload = function() {
-          $("#countdown").html(this.responseText);
-          console.log(this.responseText);
-          if (parseInt(this.responseText)==1) {
-            $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
-          }
-        }
-        xhr.send();
-      },1000)
+        setInterval(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'spBackend/countdown.php', true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                $("#countdown").html(this.responseText);
+                console.log(this.responseText);
+                if (parseInt(this.responseText) == 1) {
+                    $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
+                }
+            }
+            xhr.send();
+        }, 1000)
     </script>
-
 
 
     </div>
 
 </section>
 <script>
-function button(id) {
-  var betu = document.getElementById(id).innerHTML.toLowerCase()
-  $("button#"+id).prop('disabled', true);
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST','spBackend/betu.php',true);
-  xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-  xhr.onload = function() {
-    console.log(this.responseText)
-    if (this.responseText!="") {
-      var received = JSON.parse(this.responseText)
-      $("#szo").html(received.spKitalaltBetuk)
-      $("#hibak").html("Hibák száma: "+received.mistakes)
-      var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
-      var kitaltSzavakOutPut = ""
-      if (received.correct==1) {
-        $('#'+betu).css("background-color", "green")
-      }
-      else {
-        $('#'+betu).css("background-color", "red")
-      }
-      if (kitalaltSzavakDb < kitaltSzavak.length) {
-        $('button').prop('disabled', false);
-        $('button').css("background-color",'')
-      }
-      kitalaltSzavakDb = kitaltSzavak.length
-      for (var i = 0; i < kitaltSzavak.length; i++) {
-        kitaltSzavakOutPut+="<li>"+kitaltSzavak[i]+"</li>"
-      }
-      $("#guessedWords").html(kitaltSzavakOutPut)
+    function button(id) {
+        var betu = document.getElementById(id).innerHTML.toLowerCase()
+        $("button#" + id).prop('disabled', true);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'spBackend/betu.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            console.log(this.responseText)
+            if (this.responseText != "") {
+                var received = JSON.parse(this.responseText)
+                $("#szo").html(received.spKitalaltBetuk)
+                $("#hibak").html("Hibák száma: " + received.mistakes)
+                var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
+                var kitaltSzavakOutPut = ""
+                if (received.correct == 1) {
+                    $('#' + betu).css("background-color", "green")
+                } else {
+                    $('#' + betu).css("background-color", "red")
+                }
+                if (kitalaltSzavakDb < kitaltSzavak.length) {
+                    $('button').prop('disabled', false);
+                    $('button').css("background-color", '')
+                }
+                kitalaltSzavakDb = kitaltSzavak.length
+                for (var i = 0; i < kitaltSzavak.length; i++) {
+                    kitaltSzavakOutPut += "<li>" + kitaltSzavak[i] + "</li>"
+                }
+                $("#guessedWords").html(kitaltSzavakOutPut)
+            }
+        }
+        xhr.send("betu=" + betu);
     }
-  }
-  xhr.send("betu="+betu);
-}
 </script>
 </body>
 </html>
