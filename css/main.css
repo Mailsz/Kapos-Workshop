@@ -80,7 +80,9 @@ img {
     width: 90%;
 }
 #kszd{
-  background-color: red;
+  background-color: #3D56B2;
   position: absolute;
-  border: 1px solid lightblue;
+  border: 4px solid lightblue;
+  left: 70px;
+  top: 220px;
 }
