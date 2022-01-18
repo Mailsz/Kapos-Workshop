@@ -8,33 +8,45 @@ var app = express();
 var server = app.listen(4000);
 var io = require('socket.io')(server, {
     cors: {
-      origin: '*',
+        origin: '*',
     }
 });
+
+let users = [];
 
 app.use(express.static('public'));
 
 //Ha uj kapcsolat jon letre
 io.on('connection', (socket) => {
 
-  //Ha a jatekosok szama tobb mint a megengedett maximum utasitsa vissza a csatlakozast
-  if(io.engine.clientsCount > maxPlayers) {
-    socket.disconnect();
-  }
-  else {
-    //Elkuldi a clientnek a csatlakozott client-ek szamat
-    io.sockets.emit ('users', {count: io.engine.clientsCount});
-  }
+    socket.on("join server", (username) => {
+        const user = {
+            username,
+            id: socket.id,
+        };
+        users.push(user);
+        io.emit("new user", users);
+    });
+
+    socket.on("join room", (roomName, cb) => {
+        socket.join(roomName);
+    })
+
+    //Ha a jatekosok szama tobb mint a megengedett maximum utasitsa vissza a csatlakozast
+    if (io.engine.clientsCount > maxPlayers) {
+        socket.disconnect();
+    } else {
+        //Elkuldi a clientnek a csatlakozott client-ek szamat
+        io.sockets.emit('users', {count: io.engine.clientsCount});
+    }
 
     const sessionID = socket.id;
 
     //Kiirja a csatlakozott fel id-jet es a csatlakozott clientek szamat
-    console.log(socket.id, 'csatlakozott');
-    console.log(io.engine.clientsCount);
+    console.log(socket.id, 'csatlakozott. jatekosok szama: ', io.engine.clientsCount);
 
     //Adat kuldes kezelese
-    socket.on('chat', function(data){
-        console.log(data);
+    socket.on('chat', function (data) {
         io.sockets.emit('chat', data);
         io.send(io.engine.clientsCount);
     });
