@@ -84,10 +84,14 @@ a:hover {
   z-index: 100;
   position: relative;
   color: white;
-  font-size: 44px;
+  font-size: 36px;
   width: 10%;
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px #000000;
   cursor: pointer;
+}
+
+.pontszovegek h2 {
+  display: none;
 }
