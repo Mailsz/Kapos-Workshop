@@ -30,3 +30,13 @@ setTimeout(function() {
   $(".a").hide(1000)
   $(".c").hide(1000)
 },60000)
+
+
+function pont(id) {
+  for (var i = 1; i < 13; i++) {
+    $(".p"+i).css("display","none")
+    $("#p"+i).css("text-decoration","none")
+  }
+  $("."+id).css("display","block")
+  $("#"+id).css("text-decoration","underline")
+}
