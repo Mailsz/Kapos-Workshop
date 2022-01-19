@@ -4,29 +4,29 @@ $(".d").hide()
 
 
 setTimeout(function() {
-  $(".a").show()
-  $(".b").hide()
-  $(".c").hide()
-  $(".d").hide()
+  $(".a").show(1000)
+  $(".b").hide(1000)
+  $(".c").hide(1000)
+  $(".d").hide(1000)
 
 },5000)
 setTimeout(function() {
-  $(".b").show()
-  $(".a").hide()
-  $(".c").hide()
-  $(".d").hide()
+  $(".b").show(1000)
+  $(".a").hide(1000)
+  $(".c").hide(1000)
+  $(".d").hide(1000)
 
 },10000)
 setTimeout(function() {
-  $(".c").show()
-  $(".b").hide()
-  $(".a").hide()
-  $(".d").hide()
+  $(".c").show(1000)
+  $(".b").hide(1000)
+  $(".a").hide(1000)
+  $(".d").hide(1000)
 
 },15000)
 setTimeout(function() {
-  $(".d").show()
-  $(".b").hide()
-  $(".a").hide()
-  $(".c").hide()
+  $(".d").show(1000)
+  $(".b").hide(1000)
+  $(".a").hide(1000)
+  $(".c").hide(1000)
 },20000)
