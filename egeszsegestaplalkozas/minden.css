@@ -83,6 +83,8 @@ a:hover {
 .pont12 h1 {
   z-index: 100;
   position: relative;
+  top: 1vw;
+  left: 1vw;
   color: white;
   font-size: 44px;
   width: 10%;
