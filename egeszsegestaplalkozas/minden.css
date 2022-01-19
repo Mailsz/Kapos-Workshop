@@ -120,3 +120,16 @@ a:hover {
   text-shadow: 2px 2px 4px #000000;
 
 }
+.pontszovegek h2 {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 5vh;
+  left: 15%;
+  color: white;
+  font-size: 36px;
+  width: 80vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  float: right;
+  text-shadow: 2px 2px 4px #000000;
