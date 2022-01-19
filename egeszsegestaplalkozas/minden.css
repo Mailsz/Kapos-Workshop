@@ -84,7 +84,7 @@ a:hover {
   z-index: 100;
   position: relative;
   color: white;
-  font-size: 36px;
+  font-size: 44px;
   width: 10%;
   font-weight: bold;
   letter-spacing: 1px;
@@ -92,6 +92,29 @@ a:hover {
   cursor: pointer;
 }
 
-.pontszovegek h2 {
-  display: none;
+#cucc p  {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+#cucc h1  {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 82px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px #000000;
+
 }
