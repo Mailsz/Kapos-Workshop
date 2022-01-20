@@ -54,7 +54,7 @@
     <div class="container signin">
         <!-- Bejelentkezés oldal link  -->
         <h3>Már van fiókja?</h3>
-        <a href="Login.html">Bejelentkezés</a>
+        <a href="Login.php">Bejelentkezés</a>
     </div>
 </form>
 
