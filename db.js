@@ -12,4 +12,6 @@ con.connect(function (err) {
     console.log("sikeres csatlakozás");
 });
 
-module.exports.con = con;
+module.export = {
+    con : con
+};
