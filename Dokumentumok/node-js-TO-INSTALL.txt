@@ -4,3 +4,4 @@ npm install --save express socket.io-client
 npm install nodemon ]
 
 npm install mysql
+npm install --save express express-session body-parser

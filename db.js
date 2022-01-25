@@ -9,5 +9,9 @@ var con = mysql.createConnection({
 
 con.connect(function (err) {
     if (err) throw err;
-    console.log("Connected!");
+    console.log("sikeres csatlakozás");
 });
+
+module.export = {
+    con : con
+};
