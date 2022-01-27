@@ -41,6 +41,10 @@
             <option value="angol">engish</option>
             <option value="magyar">hungarian</option>
         </select>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 201725fcd928b48ea1b05846aadc08fb61c22e6a
         <label for="">Time:</label>
         <select class="" name="time">
             <option value="30">30</option>
@@ -49,6 +53,10 @@
             <option value="120">120</option>
         </select>
         <button type="submit" name="button">Start</button>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 201725fcd928b48ea1b05846aadc08fb61c22e6a
         <button type="submit" name="button" id="start">Start</button>
     </form>
 </div>
