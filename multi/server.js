@@ -12,21 +12,12 @@ var io = require('socket.io')(server, {
     }
 });
 
-let users = [];
-
 app.use(express.static('public'));
 
 //Ha uj kapcsolat jon letre
 io.on('connection', (socket) => {
-
-    socket.on("join server", (username) => {
-        const user = {
-            username,
-            id: socket.id,
-        };
-        users.push(user);
-        io.emit("new user", users);
-    });
+    socket.join("lobby");
+    console.log(socket.rooms)
 
     socket.on("join room", (roomName, cb) => {
         socket.join(roomName);
@@ -39,8 +30,6 @@ io.on('connection', (socket) => {
         //Elkuldi a clientnek a csatlakozott client-ek szamat
         io.sockets.emit('users', {count: io.engine.clientsCount});
     }
-
-    const sessionID = socket.id;
 
     //Kiirja a csatlakozott fel id-jet es a csatlakozott clientek szamat
     console.log(socket.id, 'csatlakozott. jatekosok szama: ', io.engine.clientsCount);
