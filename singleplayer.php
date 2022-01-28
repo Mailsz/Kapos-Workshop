@@ -168,38 +168,6 @@
 
 </section>
 <script>
-<<<<<<< HEAD
-function button(id) {
-  var betu = document.getElementById(id).innerHTML.toLowerCase()
-  $("button#"+id).prop('disabled', true);
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST','spBackend/betu.php',true);
-  xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-  xhr.onload = function() {
-    console.log(this.responseText)
-    if (this.responseText!="") {
-      console.log(this.responseText);
-      var received = JSON.parse(this.responseText)
-      $("#szo").html(received.spKitalaltBetuk)
-      $("#hibak").html("Hibák száma: "+received.mistakes)
-      var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
-      var kitaltSzavakOutPut = ""
-      if (received.correct==1) {
-        $('#'+betu).css("background-color", "green")
-      }
-      else {
-        $('#'+betu).css("background-color", "red")
-      }
-      if (kitalaltSzavakDb < kitaltSzavak.length) {
-        $('button').prop('disabled', false);
-        $('button').css("background-color",'')
-      }
-      kitalaltSzavakDb = kitaltSzavak.length
-      for (var i = 0; i < kitaltSzavak.length; i++) {
-        kitaltSzavakOutPut+="<li>"+kitaltSzavak[i]+"</li>"
-      }
-      $("#guessedWords").html(kitaltSzavakOutPut)
-=======
     function button(id) {
         var betu = document.getElementById(id).innerHTML.toLowerCase()
         $("button#" + id).prop('disabled', true);
@@ -231,7 +199,6 @@ function button(id) {
             }
         }
         xhr.send("betu=" + betu);
->>>>>>> 6f5dc5ec8c7ce6728ebb22e96fe5cd8a146cdf76
     }
 </script>
 </body>
