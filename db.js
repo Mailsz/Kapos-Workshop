@@ -7,11 +7,4 @@ var con = mysql.createConnection({
     database: "akasztofa"
 });
 
-con.connect(function (err) {
-    if (err) throw err;
-    console.log("sikeres csatlakozás");
-});
-
-module.export = {
-    con : con
-};
+module.exports = con;

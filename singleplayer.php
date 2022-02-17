@@ -182,6 +182,12 @@
                 $("#hibak").html("Hibák száma: " + received.mistakes)
                 var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
                 var kitaltSzavakOutPut = ""
+                $('#kep').attr('src', './kepek/' + received.mistakes + '.png');
+                if (received.mistakes > 7) {
+                    alert("Vesztettel")
+                    $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
+
+                }
                 if (received.correct == 1) {
                     $('#' + betu).css("background-color", "green")
                 } else {

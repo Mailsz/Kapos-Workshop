@@ -3,7 +3,7 @@ session_start();
 include_once '../db.php';
 if (isset($_POST['betu'])) {
     $betu = $_POST['betu'];
-    if ($_SESSION['ido'] > 0) {
+    if ($_SESSION['ido'] > 0 && $_SESSION['spHiba'] < 8) {
         if (!in_array($betu, $_SESSION['spTippeltBetuk'])) {
             array_push($_SESSION["spTippeltBetuk"], $betu);
             if (str_contains($_SESSION['spSzo'], $betu)) {
@@ -34,7 +34,7 @@ if (isset($_POST['betu'])) {
                 if (!str_contains($_SESSION['spKitalaltBetuk'], '_')) {
                     array_push($_SESSION['kitalaltSzavak'], $_SESSION['spKitalaltBetuk']);
 
-
+                    $_SESSION['spHiba']=0;
                     /*logolni-db-ben*/
                     if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != '') {
                         $user = $_SESSION['felhasznalo'];
