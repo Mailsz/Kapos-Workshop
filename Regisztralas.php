@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php session_start();
+error_reporting(0);
+ ?>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
