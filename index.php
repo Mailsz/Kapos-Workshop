@@ -1,5 +1,6 @@
 <?php session_start();
 include_once 'db.php';
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -31,37 +32,84 @@ if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != "") {
     echo "<form method='POST' action='belepes/logout.php'><button name='logout' type='submit' id='logout'>Kijelentkezés</button></form>";
 }
 ?>
-<div class="gombok">
-    <div class="inditas">
-        <!-- Singleplayer Gomb -->
-        <button type="button" name="egyjatekos">Egyjátékos</button>
-        <br>
-        <!-- Multiplayer Gomb -->
-        <button type="button" id="mp" name="tobbjatekos">Többjátékos</button>
-    </div>
-    <div class="belepes">
-        <!-- Login Gomb -->
-        <button type="button" name="bejelentkezes">Bejelentkezés</button>
-        <br>
-        <!-- Register Gomb -->
-        <button type="button" name="regisztralas">Regisztrálás</button>
-    </div>
-    <!-- Settings Gomb -->
-    <button type="button" name="beallitasok"><i class="fa fa-gear"></i></button>
-</div>
-<div class="ranglista">
-  <?php
-    $sql="SELECT COUNT(word), user FROM wordlog GROUP BY user";
-    mysqli_query($connect,"SET NAMES 'utf8'");
-    $result = mysqli_query($connect, $sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-      
-      echo $row['user'];
-      echo $row['COUNT(word)'];
+<table>
+  <tr>
+    <td id="tableLeft">
+      <img src="kepek/7.png" id="kep" alt="">
+    </td>
+    <td id="tableMid">
+      <div class="gombok">
+          <div class="inditas">
+              <!-- Singleplayer Gomb -->
+              <button type="button" name="egyjatekos">Egyjátékos</button>
+              <br>
+              <!-- Multiplayer Gomb -->
+              <button type="button" id="mp" name="tobbjatekos">Többjátékos</button>
+          </div>
+          <div class="belepes">
+              <!-- Login Gomb -->
+              <button type="button" name="bejelentkezes">Bejelentkezés</button>
+              <br>
+              <!-- Register Gomb -->
+              <button type="button" name="regisztralas">Regisztrálás</button>
+          </div>
+          <!-- Settings Gomb -->
+          <button type="button" name="beallitasok"><i class="fa fa-gear"></i></button>
+      </div>
+    </td>
 
-    }
-  ?>
-</div>
+    <td id="tableRight">
+      <h2 id="ranglistaCim" style="text-align: center">Ranglista</h2>
+      <div id="ranglista" style="background: #3D56B2">
+        <table id="ranglistaTable">
+          <tr>
+            <td>
+              <h2 style="text-align: center">Nevek</h2>
+            </td>
+            <td>
+              <h2 style="text-align: center">Kitalált szavak</h2>
+            </td>
+          </tr>
+          <tr>
+            <td><?php
+              $sql="SELECT user, COUNT(*) FROM wordlog GROUP BY user";
+              $r=mysqli_query($connect, $sql);
+              $row=0;
+              while(mysqli_fetch_assoc($r)["user"]){
+                $row+=1;
+              }
+
+              $sql = "SELECT felhasznalok.nev, COUNT(word) FROM wordlog LEFT JOIN felhasznalok ON felhasznalok.salt = wordlog.user  GROUP BY user ORDER BY COUNT(word) DESC";
+              $r=mysqli_query($connect, $sql);
+
+              if($row>10){
+                $row=10;
+              }
+              for ($i=0; $i < $row; $i++) {
+                echo mysqli_fetch_column($r, 0);
+                echo "<br>";
+              }
+                ?></td>
+
+            <td>
+              <?php
+                $r=mysqli_query($connect, $sql);
+                for ($i=0; $i < $row; $i++) {
+                  echo mysqli_fetch_column($r, 1);
+                  echo "<br>";
+                }
+               ?>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
+
 <script type="text/javascript" src="js/iranyitas.js"></script>
 </body>
 </html>

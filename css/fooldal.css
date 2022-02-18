@@ -8,6 +8,54 @@ h1{
   color: #14279B;
 }
 
+#ranglistaCim{
+  color: #14279B;
+  font-size: 34px;
+}
+
+td{
+  font-size: 20px;
+}
+
+#ranglistaTable{
+  border-radius: 25%;
+}
+
+#kep{
+  width: 85%;
+  height: 85%;
+  text-align: center;
+}
+
+#ranglistaTable{
+  width: 80%;
+  text-align: center;
+}
+
+#ranglista{
+  width: 100%;
+  text-align: left;
+  border-radius: 15px;
+  opacity: 0.86;
+  border: 4px solid lightblue;
+  letter-spacing: 1px;
+  color: #E6E6E6;
+  box-shadow: 0 10px #999;
+  margin-bottom: 40svh;
+}
+
+
+
+#tableLeft{
+  width: 30%;
+}
+#tableMid{
+  width: 40%;
+}
+#tableRight{
+  width: 30%;
+}
+
 .gombok{
   text-align: center;
 }
@@ -46,8 +94,6 @@ button:active {
   color:white;
   cursor: not-allowed;
   text-shadow: 0 0 3px black, 0 0 5px black;
-
-
 }
 
 * {

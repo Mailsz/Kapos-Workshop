@@ -19,27 +19,8 @@ include_once 'db.php';
 
 <div class="beallitasok">
     <!-- Nyelv Legördülő Menü  -->
-    <label for="Nyelv">Nyelv:</label>
-    <select class="" name="Nyelv">
-        <option value="">Magyar</option>
-        <option value="">English</option>
-        <option value="">Suomi</option>
-    </select>
 
-    <br>
-    <br>
     <!-- Hang Slider  -->
-    <label for="">Hang:</label>
-    <input type="range" value="0">
-    <!-- Némítás doboz  -->
-    <div id="h4-container">
-        <div id="h4-subcontainer"></div>
-        <input type="checkbox" name="checkbox">
-        <br>
-        <!-- Sötét Mód Doboz  -->
-        <label for="">Sötét mód:</label>
-        <input type="checkbox" name="checkbox">
-    </div>
 
     <!-- Felhasználói beállítások  -->
     <h2>Felhasználónév megváltoztatása</h2>
