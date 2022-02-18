@@ -50,17 +50,15 @@ if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != "") {
     <button type="button" name="beallitasok"><i class="fa fa-gear"></i></button>
 </div>
 <div class="ranglista">
-  <?php
-    $sql="SELECT COUNT(word), user FROM wordlog GROUP BY user";
-    mysqli_query($connect,"SET NAMES 'utf8'");
+    <?php
+    $sql = "SELECT COUNT(word), user FROM wordlog GROUP BY user";
+    mysqli_query($connect, "SET NAMES 'utf8'");
     $result = mysqli_query($connect, $sql);
     while ($row = mysqli_fetch_assoc($result)) {
-      
-      echo $row['user'];
-      echo $row['COUNT(word)'];
-
+        echo $row['user'];
+        echo $row['COUNT(word)'];
     }
-  ?>
+    ?>
 </div>
 <script type="text/javascript" src="js/iranyitas.js"></script>
 </body>
