@@ -177,13 +177,14 @@
         xhr.onload = function () {
             console.log(this.responseText)
             if (this.responseText != "") {
+              console.log(JSON.parse(this.responseText));
                 var received = JSON.parse(this.responseText)
                 $("#szo").html(received.spKitalaltBetuk)
                 $("#hibak").html("Hibák száma: " + received.mistakes)
                 var kitaltSzavak = JSON.parse(received.spKitalaltSzavak)
                 var kitaltSzavakOutPut = ""
                 $('#kep').attr('src', './kepek/' + received.mistakes + '.png');
-                if (received.mistakes > 7) {
+                if (received.mistakes > 6) {
                     alert("Vesztettel")
                     $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
 

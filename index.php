@@ -13,6 +13,7 @@ error_reporting(0);
     <!-- JavaScript és JQuery link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
 </head>
 <body>
 <h1>Hang Out!</h1>
@@ -41,17 +42,17 @@ if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != "") {
             <div class="gombok">
                 <div class="inditas">
                     <!-- Singleplayer Gomb -->
-                    <button type="button" name="egyjatekos">Egyjátékos</button>
+                    <a href="spStart.php"><button type="button" name="egyjatekos">Egyjátékos</button></a>
                     <br>
                     <!-- Multiplayer Gomb -->
                     <button type="button" id="mp" name="tobbjatekos">Többjátékos</button>
                 </div>
                 <div class="belepes">
                     <!-- Login Gomb -->
-                    <button type="button" name="bejelentkezes">Bejelentkezés</button>
+                    <a href="login.php"><button type="button" name="bejelentkezes">Bejelentkezés</button></a>
                     <br>
                     <!-- Register Gomb -->
-                    <button type="button" name="regisztralas">Regisztrálás</button>
+                    <a href="regisztralas.php"><button type="button" name="regisztralas">Regisztrálás</button></a>
                 </div>
                 <!-- Settings Gomb -->
                 <button type="button" name="beallitasok"><i class="fa fa-gear"></i></button>
@@ -107,9 +108,5 @@ if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != "") {
     </tr>
 </table>
 
-
-
-
-<script type="text/javascript" src="js/iranyitas.js"></script>
 </body>
 </html>

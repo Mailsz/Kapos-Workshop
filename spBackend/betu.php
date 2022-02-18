@@ -3,10 +3,10 @@ session_start();
 include_once '../db.php';
 if (isset($_POST['betu'])) {
     $betu = $_POST['betu'];
-    if ($_SESSION['ido'] > 0 && $_SESSION['spHiba'] < 8) {
+    if ($_SESSION['ido'] > 0 && $_SESSION['spHiba'] < 7) {
         if (!in_array($betu, $_SESSION['spTippeltBetuk'])) {
             array_push($_SESSION["spTippeltBetuk"], $betu);
-            if (str_contains($_SESSION['spSzo'], $betu)) {
+            if (str_contains($_SESSION['spSzo'], $betu)!==false) {
                 /*---Ha-jó-a-betű---*/
                 /*logolni-db-ben*/
                 if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != '') {
