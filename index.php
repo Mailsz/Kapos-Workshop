@@ -55,7 +55,7 @@ if (isset($_SESSION['felhasznalo']) && $_SESSION['felhasznalo'] != "") {
                     <a href="regisztralas.php"><button type="button" name="regisztralas">Regisztrálás</button></a>
                 </div>
                 <!-- Settings Gomb -->
-                <button type="button" name="beallitasok"><i class="fa fa-gear"></i></button>
+                <a href="beallitasok.php"><button type="button" name="beallitasok"><i class="fa fa-gear"></i></button></a>
             </div>
         </td>
 
