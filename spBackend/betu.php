@@ -3,7 +3,9 @@ session_start();
 include_once '../db.php';
 if (isset($_POST['betu'])) {
     $betu = $_POST['betu'];
+    /*Lejárte az idő vagy elérte a hiba korlátot*/
     if ($_SESSION['ido'] > 0 && $_SESSION['spHiba'] < 7) {
+        /*Tippeltéke már ezt a betű*/
         if (!in_array($betu, $_SESSION['spTippeltBetuk'])) {
             array_push($_SESSION["spTippeltBetuk"], $betu);
             if (str_contains($_SESSION['spSzo'], $betu)!==false) {

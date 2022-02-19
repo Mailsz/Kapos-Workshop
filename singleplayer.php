@@ -15,26 +15,25 @@
     <script type="module" src="db.js"></script>
     <?php
     include_once 'db.php';
+    /*Beállítások elmentése*/
     $difficulty = $_POST['difficulty'];
     $_SESSION['difficulty'] = $difficulty;
-
     $_SESSION['ido'] = $_POST['time'];
     $_SESSION['e_ido'] = $_POST['time'];
-
     $language = $_POST['language'];
     $_SESSION['language'] = $language;
+
+    /*Szó lekérése beeállítások alapján*/
     $sql = "SELECT szo FROM szavak WHERE nyelv='$language' AND nehezseg = '$difficulty' ORDER BY RAND() LIMIT 1 ";
     mysqli_query($connect, "SET NAMES 'utf8'");
     $r = mysqli_query($connect, $sql);
-
     $_SESSION['spSzo'] = lcfirst(mysqli_fetch_assoc($r)['szo']);
+
+    /*Játék logikához szükséges SESSIONok létrehozása*/
     $_SESSION['spKitalaltBetuk'] = "";
     $_SESSION['spTippeltBetuk'] = [];
-
     $_SESSION['spHiba'] = 0;
-
     $_SESSION['kitalaltSzavak'] = [];
-
     for ($i = 0; $i < mb_strlen($_SESSION['spSzo'], 'UTF-8'); $i++) {
         $_SESSION['spKitalaltBetuk'] = $_SESSION['spKitalaltBetuk'] . '_';
     }
@@ -44,7 +43,9 @@
 
 <section id="szo_sec">
     <p id="countdown"></p>
-    <p id="szo"><?php
+    <p id="szo">
+      <?php
+      /*Kitalálandó szó megjelenítése*/
         echo $_SESSION['spKitalaltBetuk'];
         ?></p>
 
@@ -141,6 +142,7 @@
     ?>
 
     <script type="text/javascript">
+      /*Billentyű lenyomása*/
         $(function () {
             kitalaltSzavakDb = 0
             $('body').keypress(function (e) {
@@ -148,6 +150,7 @@
             });
         });
 
+        /*Idő visszaszámláló*/
         setInterval(function () {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'spBackend/countdown.php', true);
@@ -168,16 +171,22 @@
 
 </section>
 <script>
+    /*Tippelt betű elküldése*/
     function button(id) {
         var betu = document.getElementById(id).innerHTML.toLowerCase()
+
+        /*Tippelt betű gombjának kikapcsolása*/
         $("button#" + id).prop('disabled', true);
+
+        /*AJAX request*/
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'spBackend/betu.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhr.onload = function () {
             console.log(this.responseText)
             if (this.responseText != "") {
-              console.log(JSON.parse(this.responseText));
+              /*PHP-tól visszakapott adatok értelmezése*/
+                console.log(JSON.parse(this.responseText));
                 var received = JSON.parse(this.responseText)
                 $("#szo").html(received.spKitalaltBetuk)
                 $("#hibak").html("Hibák száma: " + received.mistakes)
@@ -185,10 +194,12 @@
                 var kitaltSzavakOutPut = ""
                 $('#kep').attr('src', './kepek/' + received.mistakes + '.png');
                 if (received.mistakes > 6) {
+                  /*Ha a hibaszám eléri a 7-et*/
                     alert("Vesztettel")
                     $("#jatekUjra").html('<button onclick="location.reload()">Játék újra</button>')
 
                 }
+                /*Tippelt betű helyessége a css-nek*/
                 if (received.correct == 1) {
                     $('#' + betu).css("background-color", "green")
                 } else {
@@ -202,6 +213,7 @@
                 for (var i = 0; i < kitaltSzavak.length; i++) {
                     kitaltSzavakOutPut += "<li>" + kitaltSzavak[i] + "</li>"
                 }
+                /*Kitalált szavak kiírása*/
                 $("#guessedWords").html(kitaltSzavakOutPut)
             }
         }
